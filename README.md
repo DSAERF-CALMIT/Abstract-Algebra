@@ -13,6 +13,21 @@
 <br>
 
 
+## LaTeX Lecture Notes are currently updating ...
+
+[**All LaTeX Notes Abstract Algebra**](https://github.com/DSAERF-CALMIT/Abstract-Algebra/tree/main/Note)
+
+[Abstract Algebra LaTeX Note 1](https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Note/note01.tex)
+
+[Abstract Algebra LaTeX Note 2](https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Note/note02.tex)
+
+[Abstract Algebra LaTeX Note 3](https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Note/note03.tex)
+
+[Abstract Algebra LaTeX Note 4](https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Note/note04.tex)
+
+<br>
+
+
 ## Under suspension because some LaTeX sentenses don't work with markdown.
 
 ### [**Notes - All In One** (Latest Edit: May 17th)](https://binaryphi.site/AA.html)
