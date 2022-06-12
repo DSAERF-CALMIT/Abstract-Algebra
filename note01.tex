@@ -1,0 +1,209 @@
+\documentclass[12pt]{scrartcl}
+\title{Abstract Algebra Assignments Solution}
+\nonstopmode
+\usepackage{graphicx}	% Required for including pictures
+\usepackage[figurename=Figure]{caption}
+\usepackage{float}    	% For tables and other floats
+\usepackage{verbatim} 	% For comments and other
+\usepackage{amsmath}  	% For math
+\usepackage{amssymb}  	% For more math
+\usepackage{fullpage} 	% Set margins and place page numbers at bottom center
+\usepackage{paralist} 	% paragraph spacing
+\usepackage{listings} 	% For source code
+\usepackage{subfig}   	% For subfigures
+\usepackage{enumitem} 	% useful for itemization
+\usepackage{siunitx}  	% standardization of si units
+\usepackage{tikz,bm} 	% Useful for drawing plots
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand\footrule{\hrule height1pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~Jinwei Zou}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+	\begin{center}
+		\hrule
+		\vspace{15pt}
+		{\textbf { \large Solution - Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~BinaryPhi}}
+	\end{center}
+
+	\thispagestyle{empty}
+	\indent {\textbf{Name:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Assignment:} Number 1 \vspace{5pt} \\
+	\indent {\textbf{Score:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Last Edit:} \today~PDT \vspace{8pt} \\
+	\hrule
+	\vspace{15pt}	
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 1: Definitions}
+
+	\begin{enumerate}[label=(\alph*)]
+
+	\item \begin{spacing}{1.2}Assuming $A$ and $B$ are two sets, the \textbf{Direct Product} (or \underline{Cartesian Product}) of set $A$ and set $B$ is defined as $$A \times B = \{ \underline{(a, b) ~ | ~ a \in A, b \in B} \}.$$\end{spacing}
+	\item \begin{spacing}{1.2}Assuming $A$, $B$ and $C$ are three non-empty sets, the mapping from $A \times B$ to $C$ is called an  \underline{\textbf{Algebraic Operation}}. \end{spacing}
+
+	\item \begin{spacing}{1.2}Most of the time, we have $A=B=C$(an algebraic operation from $A$ and $A$ to $A$), which is called the \underline{\textbf{Binary Operation}} in $A$. \end{spacing}
+
+	\item \textbf{Associative Property} denotes to a type of binary operation "$\circ$" in set $A$ if $$\underline{(a \circ b)\circ c = a \circ (b \circ c)}, \forall a, b, c \in A.$$ 
+	\vspace{0.3em}
+
+	\item \textbf{Commutative Property} denotes to a type of binary operation "$\circ$" in set $A$ if $$\underline{a \circ b = b \circ a\vphantom{,}}, \forall a, b \in A.$$
+	\vspace{0.3em}
+
+	\item "$\circ$" is left-distributive over "$+$" if $$\underline{a \circ (b + c) = a \circ b + a \circ c}, ~\forall a, b, c \in A.$$
+	"$\circ$" is right-distributive over "$+$" if $$\underline{(b + c) \circ a = b \circ a + c \circ a}, ~\forall a, b, c \in A.$$
+	"$\circ$" is \textbf{Distributive} over "$+$" if it is both left- and right-distributive. 
+	\newpage
+	\item \begin{spacing}{1.2}Assuming $A$ is a non-empty set and $R$ is a subset of $A \times A$, $a, b \in A$, if $(a, b) \in R$, we define that $a$ and $b$ have a relation $R$, denoted by \underline{$aRb ~ (a \sim b)$}. $R$ denotes a \textbf{relation} of $A$. \end{spacing}
+
+	\item An \textbf{Equivalent Relation} $R$ from set $A$ satisfies the following, $\forall (a, b, c) \in A$:
+		\subitem 1. \underline{\textbf{Reflexive}\vphantom{,}}  Property: \underline{$aRa$\vphantom{,}}		
+		\subitem 2. \underline{\textbf{Symmetric}}  Property: \underline{$aRb \Rightarrow bRa$\vphantom{,}}
+		\subitem 3. \underline{\textbf{Transitive}\vphantom{,}}  Property: \underline{$aRb, bRc \Rightarrow aRc$} \\
+
+	\item \begin{spacing}{1.2}A set of non-empty subsets of $A$, such that every element of $A$ is included in exactly one subset of $A$, is defined as a \underline{\textbf{Partition}} of set $A$. \end{spacing}
+	\vspace{0.5em}
+
+	\item \begin{spacing}{1.2}Assuming $R$ is an equivalent relation in set $A$, $a \in A$, the set of all elements that have the relation $R$ with $a$: $\{b \in A ~ | ~ bRa\}$, is defined as the \underline{\textbf{Equivalence Class}} of $a$ (also denoted by \underline{\hbox to 4pt{} $\bar{a}$ \hbox to 4pt{}}\vphantom{,}). $a$ is called a \textbf{representative} of the class. \end{spacing}
+	\vspace{0.5em}
+
+	\item \begin{spacing}{1.2}Assuming $R$ is an equivalent relation in set $A$, then the set of all equivalence classes of $A$ with respect to the relation $R$: $\{\bar{a} ~ | ~ a \in A\}$, is called the \underline{\textbf{Quotient (Set)}} of $A$ by $R$, and is denoted by \underline{$A/R$}. \end{spacing}
+	\vspace{0.5em}
+
+	\item \begin{spacing}{1.2}Assuming $R$ is an equivalent relation in set $A$, then the map $$\iota: A \rightarrow A/R, ~\iota(a) = \bar{a}, ~\forall a \in A,$$ is called the \underline{\textbf{Cononical Map}} from $A$ to $A/R$. \end{spacing}
+	\vspace{0.5em}
+
+	\item \begin{spacing}{1.2}Assuming a binary operation "$\circ$" is in set $A$, if an equivalent relation $R$ of $A$ satisfies under this binary operation: $$\underline{aRb, cRd \Longrightarrow (a \circ c) R (b \circ d), ~~\forall a,b,c,d \in A},$$ $R$ is a \textbf{Congruence Relation} with respect to operation "$\circ$", by definition. For the equivalence class of $a$, $\bar{a}$ is called the \underline{\textbf{Congruence Class}}.\end{spacing}
+
+	\end{enumerate}
+
+\newpage
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 2: } Justify if $R$ of each of the following relation is an equivalence relation:
+
+	\begin{enumerate}[label=\textbf{\arabic*)}]
+	
+	\item For two $m \times n$ matrix $A$ and $B$, we have $ARB$ if there exists an invertible $n \times n$ matrix $P$ and an invertible $m \times m$ matrix $Q$ that satisfy $A=PBQ$.
+	
+	\vspace{\stretch{0.05}}	
+	\fbox{\begin{minipage}{0.9\textwidth}
+		\vspace{0.3em}
+		~~~Reflexive Property: $$A=PAQ$$
+	
+		~~~Commutative Property: $$A=PBQ \Longrightarrow B=PAQ$$
+	
+		~~~Associative Property: $$B=PAQ, C=PBQ \Longrightarrow C=PAQ$$
+	\end{minipage}}
+	\vspace{\stretch{0.05}}	
+
+	\item For two $m \times n$ matrix $A$ and $B$, we have $ARB$ if there exists an $n \times n$ matrix $P$ and an $m \times m$ matrix $Q$ that satisfy $A=PBQ$.
+
+	\vspace{\stretch{0.1}}	
+	\fbox{\begin{minipage}{0.9\textwidth}
+		\vspace{4em}
+		~~~Incorrect Statement.
+		\vspace{4em}
+	\end{minipage}}
+	\vspace{\stretch{0.1}}	
+
+	\item For two $m \times m$ matrix $A$ and $B$, we have $ARB$ if there exists an invertible $n \times n$ matrix $P$ that satisfy $A=PBP^{-1}$.
+
+	\vspace{\stretch{0.05}}	
+	\fbox{\begin{minipage}{0.9\textwidth}
+		\vspace{0.3em}
+		~~~Reflexive Property: $$A=PAP^{-1}$$
+	
+		~~~Commutative Property: $$A=PBP^{-1} \Longrightarrow B=PAP^{-1}$$
+	
+		~~~Associative Property: $$B=PAP^{-1}, C=PBP^{-1} \Longrightarrow C=PAP^{-1}$$
+	\end{minipage}}
+	\vspace{\stretch{0.05}}
+
+	\end{enumerate}
+
+\newpage
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 3: } Which of the following binary operation "$\sim$" has commutative property? Which of the following has associative property?
+
+	\begin{enumerate}[label=\arabic*)]
+
+	\item $a \sim b = a - b, ~~\forall a, b \in \mathbb{Z};$
+	\vspace{\stretch{0.05}}
+
+	\fbox{\begin{minipage}{0.9\textwidth}
+	\vspace{1.5em}
+	~~~Commutative Property: None;\\
+
+	~~~Associative Property: None;
+	\vspace{2em}
+	\end{minipage}}
+	\vspace{\stretch{0.05}}
+
+	\item $a \sim b = a^b, ~~\forall a, b \in \mathbb{N};$
+	\vspace{\stretch{0.05}}
+
+	\fbox{\begin{minipage}{0.9\textwidth}
+	\vspace{1.5em}
+	~~~Commutative Property: None;\\
+
+	~~~Associative Property: None;
+	\vspace{2em}
+	\end{minipage}}
+	\vspace{\stretch{0.05}}
+
+	\item $a \sim b = a^bb^a, ~~\forall a, b \in \mathbb{N};$
+	\vspace{\stretch{0.03}}
+
+	\fbox{\begin{minipage}{0.9\textwidth}
+	\vspace{1em}
+	~~~Commutative Property: Exist;\\
+
+	~~~Associative Property: None:
+
+		\begin{align*}
+		\forall c \in \mathbb{N},& (a \sim b) \sim c = (a^bb^a)^c c^{(a^bb^a)} \\
+		& a \sim (b \sim c) = a^{(b^cc^b)}(b^cc^b)^a
+		\end{align*}
+	\vspace{1em}
+	\end{minipage}}
+	\vspace{\stretch{0.02}}
+
+	\item $a \sim b = a^2b^2, ~~\forall a, b \in \mathbb{Q};$
+	\vspace{\stretch{0.05}}
+
+	\fbox{\begin{minipage}{0.9\textwidth}
+	\vspace{1.5em}
+	~~~Commutative Property: Exist;\\
+
+	~~~Associative Property: Exist;
+	\vspace{2em}
+	\end{minipage}}
+	\vspace{\stretch{0.05}}
+
+	\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
