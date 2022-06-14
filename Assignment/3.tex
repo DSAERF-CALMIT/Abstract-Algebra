@@ -1,0 +1,195 @@
+\documentclass[12pt]{scrartcl}
+\title{Abstract Algebra Assignments}
+\nonstopmode
+\usepackage{graphicx}	% Required for including pictures
+\usepackage[figurename=Figure]{caption}
+\usepackage{float}    		% For tables and other floats
+\usepackage{amsmath}  	% For math
+\usepackage{bbm}  		% For mathBBM
+\usepackage{amssymb}  	% For more math
+\usepackage{fullpage} 	% Set margins and place page numbers at bottom center
+\usepackage{paralist} 	% paragraph spacing
+\usepackage{listings} 	% For source code
+\usepackage{enumitem} 	% useful for itemization
+\usepackage{siunitx}  	% standardization of si units
+\usepackage{tikz,bm} 	% Useful for drawing plots
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand\footrule{\hrule height1pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~Jinwei Zou}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+	\begin{center}
+		\hrule
+		\vspace{15pt}
+		{\textbf { \large Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~BinaryPhi}}
+	\end{center}
+
+	\thispagestyle{empty}
+	\indent {\textbf{Name:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Assignment:} Number 3 \vspace{5pt} \\
+	\indent {\textbf{Score:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Last Edit:} \today~PDT \vspace{8pt} \\
+	\hrule
+	\vspace{15pt}	
+
+%%%%%%%%%%%%%%%%
+	\paragraph*{Problem 1: Definitions}
+
+	\begin{enumerate}[label=(\alph*)]
+	
+
+%%%%%A
+	\item \begin{spacing}{1.2}Assuming $H$ is a non-empty subset of group $G$ while $H$ is also a group with respect to the operation of $G$, we call $H$ a \underline{\hbox to 60pt{}} of $G$. \end{spacing}
+
+	%%%%%B
+	\item \begin{spacing}{1.2}$H$ is a subgroup of a group $G$. If $H=\{e\}$ or $H = G$, $H$ is called a \underline{\hbox to 90pt{}}. Other subgroups are called the \underline{\hbox to 120pt{}}. \end{spacing}
+
+	%%%%%C
+	\item \begin{spacing}{1.2} Prove that the following statements are equivalent if $H$ is a non-empty subset of $G$. 
+	\subitem 1. $H < G$.
+	\subitem 2. $a, b \in H \Longrightarrow a \circ b \in H, a^{-1} \in H$.
+	\subitem 3. $a, b \in H \Longrightarrow a \circ b^{-1} \in H$.	\end{spacing}
+
+	\vspace{0.5em}
+	\framebox(36.2em, 22em){}
+
+
+	%%%%%D
+	\item Assume $H$ is a subgroup of group $G$, $a \in G$, then:
+	$$a \circ H = \{a \circ h ~ | ~ h \in H\}, H \circ a = \{h \circ a ~ | ~ h \in H\}$$
+	\begin{spacing}{1.2}(Or often written as:
+	$aH = \{ah ~ | ~ h \in H\}, Ha = \{ha ~ | ~ h \in H\}$) are called the \underline{\hbox to 60pt{}} and \underline{\hbox to 60pt{}} of $H$ with the representative el ement $a$, respectively.\end{spacing}
+
+	%%%%%E
+	\item \begin{spacing}{1.2}Assuming $H$ is a subgroup of group $G$ and $aRb \iff a^{-1}b \in H,$\\ i) prove that the relation $R$ in $G$ is an equivalent relation and \\ii) the equivalent class of $a$, $\overline{a\vphantom{b}}$, is exactly the left coset of $H$ represented by $a$: $aH$; \\iii) thus the set of all left cosets of $H: \{aH\}$ is a partition of $G$.	\end{spacing}
+
+	\vspace{0.5em}
+	\framebox(36.2em, 22em){}
+	\vspace{0.3em}
+
+	%%%%%F
+	\item \begin{spacing}{1.2}The quotient set $G/R$ of group $G$ with respect to the equivalent relation $aRb \iff a^{-1}b \in H, H < G$ is called the \underline{\hbox to 260pt{}} or \underline{\hbox to 100pt{}}, denoted by $G/H^{\mathbb{L}}$.\end{spacing}
+
+	%%%%%G
+	\item \begin{spacing}{1.2}The \underline{\hbox to 50pt{}} of a subgroup $H$ in a group $G$ is the number of left cosets or right cosets of $H$ in $G$, which is denoted by $[G:H]$ or $|G:H|$.
+	\end{spacing}
+
+\newpage
+	%%%%%H
+	\item \begin{spacing}{1.2}Assuming a group $G$ has a subgroup $H<G$, we define $H$ to be a \underline{\hbox to 110pt{}} of $G$ (denoted by $H \lhd G$), if: $$ghg^{-1} \in H, \forall g \in G, \forall h \in H.$$\end{spacing}
+
+\vspace{0.2em}
+	%%%%%I
+	\item Prove the following statements are equivalent assuming $G$ is a group and $H<G$:
+	\subitem 1) $H \lhd G;$
+	\subitem 2) $gH=Hg, \forall g \in G;$
+	\subitem 3) $g_1H \cdot g_2H = g_1g_2H =\{g_1h_1g_2h_2 ~ | ~ h_1, h_2 \in H\}.$
+
+	\vspace{1em}	\begin{spacing}{1.3}
+	\setlength{\leftskip}{18pt}	
+	\framebox(35.5em, 35em){}
+	\end{spacing}
+	
+\newpage
+	%%%%%J
+	\item \begin{spacing}{1.2}Assuming $G$ is a group and $H<G$, $R$ is a relation defined by $aRb \iff a^{-1}b \in H$, then: $$R\text{~is a congruence relation in~}G \iff H \lhd G.$$
+
+	\framebox(36.2em, 28em){}
+
+\vspace{1em}
+More importantly, the quotient set $G/R$ and the operation with respect to the congruence relation $R$ is, a group, which is also called the \underline{\hbox to 100pt{}} or \underline{\hbox to 100pt{}} of $G$ by $H$, denoted by $G/H$.
+\end{spacing}
+
+	\end{enumerate}
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 2: }Prove:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Assuming $H$ is a non-empty and finite subset of group $G$, we have $$H < G \Longleftrightarrow H \text{~is closed under the operation of~} G$$
+
+\item \rule{0pt}{20pt}If $H_1$ and $H_2$ are both subgroup of group $G$, then $H_1 \cap H_2 < G$.
+
+\item \rule{0pt}{20pt}$[\mathbb{Z}: m \circ \mathbb{Z}] = m,$ where $m \in \mathbb{N}$
+
+\vspace{0.8em}
+\framebox(36em, 40em){}
+
+
+\end{enumerate}
+
+\newpage
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 3: }\textbf{Lagrange Theorem:}\\
+
+\vspace{0.6em}
+\setlength{\leftskip}{12pt}\noindent For a finite group $G$, $H<G$, then we have: $$|G| = [G:H]\cdot|H|,$$ which means the order of the subgroup $H$ is a factor of the order of $G$.\\
+
+\setlength{\leftskip}{0pt}
+\vspace{1em}
+\framebox(36em, 16em){}
+
+\vspace{2em}
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 4: }\textbf{Corollary} of Lagrange Theorem: \\
+
+\setlength{\leftskip}{12pt}\noindent If $G$ is a finite group and $K<G, H<K,$ we have: $$[G:H] = [G:K] \cdot [K:H].$$
+
+\setlength{\leftskip}{0pt}
+\vspace{0.8em}
+\framebox(36em, 16em){}
+
+\newpage
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 5: }Which of the following are true?
+\begin{enumerate}[label=(\alph*)]
+\begin{spacing}{1.2}
+\item \underline{\hbox to 40pt{}}~~There exists a group in which the cancellation law fails.
+\item \underline{\hbox to 40pt{}}~~Every group has exactly two improper subgroups.
+\item \underline{\hbox to 40pt{}}~~Every group is a subgroup of itself.
+\item \underline{\hbox to 40pt{}}~~A subgroup can be defined as the subset of a group.
+\item \underline{\hbox to 40pt{}}~~Every set of numbers that is a group under addition is also a group under multiplication.
+\end{spacing}
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 6: }\begin{spacing}{1.4}Prove that \\if $G$ is an abelian group, written multiplicatively, with identity element $e$, then all elements $x$ of $G$ satisfying the equation $x^2=e$ form a subgroup $H$ of $G$.
+
+\vspace{2em}
+\framebox(36.5em, 30em){}
+\end{spacing}
+
+\newpage
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 7: } \begin{spacing}{1.4}Assume $H, K$ are two normal subgroups of group $G$ and $H \cap K = \{1\}.$ Prove the following $$hk=kh, \forall h \in H, \forall k \in K.$$
+
+\vspace{0.8em}
+\framebox(36.5em, 16em){}
+\end{spacing} 
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 8: } \begin{spacing}{1.4}Assume $H$ is a normal subgroup of group $G$. Prove that the sufficient prerequisite for $G/H$ to be an abelian group is the following: $$gkg^{-1}k^{-1} \in H, \forall g, k \in G.$$
+
+\vspace{0.8em}
+\framebox(36.5em, 16em){}
+\end{spacing}
+
+\end{document}
+
+
+
+
+
+
+
+

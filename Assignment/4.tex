@@ -1,0 +1,234 @@
+\documentclass[12pt]{scrartcl}
+\title{Abstract Algebra Assignments}
+\nonstopmode
+\usepackage{graphicx}	% Required for including pictures
+\usepackage[figurename=Figure]{caption}
+\usepackage{float}    		% For tables and other floats
+\usepackage{amsmath}  	% For math
+\usepackage{bbm}  		% For mathBBM
+\usepackage{amssymb}  	% For more math
+\usepackage{fullpage} 	% Set margins and place page numbers at bottom center
+\usepackage{paralist} 	% paragraph spacing
+\usepackage{listings} 	% For source code
+\usepackage{enumitem} 	% useful for itemization
+\usepackage{siunitx}  	% standardization of si units
+\usepackage{tikz,bm} 	% Useful for drawing plots
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand\footrule{\hrule height1pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~Jinwei Zou}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+	\begin{center}
+		\hrule
+		\vspace{15pt}
+		{\textbf { \large Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~BinaryPhi}}
+	\end{center}
+
+	\thispagestyle{empty}
+	\indent {\textbf{Name:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Assignment:} Number 4 \vspace{5pt} \\
+	\indent {\textbf{Score:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Last Edit:} \today~PDT \vspace{8pt} \\
+	\hrule
+	\vspace{15pt}	
+
+%%%%%%%%%%%%%%%%
+	\paragraph*{Problem 1: Definitions}
+
+	\begin{enumerate}[label=(\alph*)]
+	
+	%%%%%A
+	\item \begin{spacing}{1.2}Assuming $\{G_1; \circ\}$ and $\{G_2; *\}$ are two groups and $f$ is a map from $G_1$ to $G_2$, if: $$f(a \circ b) = f(a) * f(b), ~~\forall a, b \in G_1,$$ the map $f$ is called a \underline{\hbox to 120pt{}}.
+\vspace{0.5em}
+
+\setlength{\leftskip}{0pt}If $G_1$ and $G_2$ are two same groups,
+
+\setlength{\leftskip}{24pt}$f$ is called an \underline{\hbox to 100pt{}}.
+\vspace{0.5em}
+
+\setlength{\leftskip}{0pt}If a \underline{\hbox to 120pt{}} $f$ is an injection (one-to-one),
+
+\setlength{\leftskip}{24pt}$f$ is called a \underline{\hbox to 100pt{}}.
+\vspace{0.5em}
+
+\setlength{\leftskip}{0pt}If a \underline{\hbox to 120pt{}} $f$ is a surjection (onto), 
+
+\setlength{\leftskip}{24pt}$f$ is called an \underline{\hbox to 100pt{}}.
+\vspace{0.5em}
+
+\setlength{\leftskip}{0pt}If a \underline{\hbox to 120pt{}} $f$ is a bijection (one-to-one correspondence, invertible), 
+
+\setlength{\leftskip}{24pt}$f$ is called an \underline{\hbox to 100pt{}}, and $G_1$ and $G_2$ are \underline{\hbox to 100pt{}}, which is denoted by $G_1 \cong G_2.$
+\end{spacing}
+
+	%%%%%B
+	\item Supplement:
+
+\vspace{0.2em}
+\underline{\hbox to 200pt{}} $$f: A \rightarrow B, \forall \hspace{0.2em} a, b \in A, \text{~such that }f(a) = f(b) \Longrightarrow a = b.$$
+
+\underline{\hbox to 200pt{}} $$f: A \rightarrow B, \forall \hspace{0.2em} b \in B, \exists \hspace{0.2em} a \in A \text{~ s.t.} ~ f(a) = b.$$
+
+\underline{\hbox to 200pt{}} $$f: A \rightarrow B, \forall \hspace{0.2em} b \in B, \text{exists a unique} ~ a \in A \text{~ s.t.} ~ f(a) = b.$$
+
+	%%%%%C
+	\item \begin{spacing}{1.3}Assuming $f$ is a group homomorphism from group $G_1$ to group $G_2$, then the set of all elements from $G_1$ which map to element $e$ in $G_2$ is called the \underline{\hbox to 50pt{}} of group homomorphism $f$, which is denoted by \underline{\hbox to 30pt{}}. Mathematically written as: $$ \underline{\hbox to 30pt{}} := \{g_1 \in G_1 ~ | ~ f(g_1) = e\}.$$
+\end{spacing}
+	
+
+
+	%%%%%D
+	\item \begin{spacing}{1.2} Assuming $f$ is a group homomorphism from group $G_1$ to group $G_2$, $e_1, e_2$ are the identity elements in $G_1, G_2$ respectively, $\circ, *$ are the operations in $G_1, G_2$ respectively, prove that $f(e_1) = e_2$ and $\forall a \in G_1, f(a^{-1}) = f(a)^{-1}.$
+
+\vspace{0.5em}
+\end{spacing}
+\framebox(35.6em, 15em){}
+	\vspace{2em}
+
+
+%%%%%E
+	\item \begin{spacing}{1.3}Assuming $f$ is a group homomorphism from group $G_1$ to group $G_2$, $H < G_1$, prove that the image set of $H$, $f(H)$ is a subgroup of $G_2$.\end{spacing}
+
+	\vspace{0.5em}
+\framebox(35.6em, 12em){}
+
+\newpage
+%%%%%F
+	\begin{spacing}{1.3}
+	\item Assuming $G$ is a group, $H \lhd G$, $\iota$ is a map from $G$ to $G/H$: \vspace{-1em}$$\iota(a) = aH, ~ \forall a \in G.\vspace{-1em}$$ Then, $\iota$ is an epimorphism, and is called the \underline{\hbox to 150pt{}} from group $G$ to quotient group $G/H$.
+\end{spacing}
+
+%%%%%G 
+\vspace{-0.1em}
+	\item \begin{spacing}{1.2}\textbf{Group Isomorphism Theorem I $|$ Fundamental Theorem on Group Homomorphisms}\end{spacing}
+
+Prove that if $f$ is an epimorphism from group $G_1$ to group $G_2$, $G_1/\text{ker}~ f \cong G_2.$
+
+\vspace{0.5em}
+	\framebox(35.6em, 40em){}
+
+%%%%%H
+	\item \textbf{Group Isomorphism Theorem II}
+\begin{spacing}{1.3}Let $G$ be a group, $N \lhd G$, and $H$ is a subgroup of $G$. Then:
+	
+\setlength{\leftskip}{20pt}1. $HN$ is a subgroup of $G$ which contains $N.$
+
+2. $(H \cap N) \lhd H.$
+
+3. $HN/N \cong H/(H \cap N).$
+
+\end{spacing}
+
+
+%%%%%I
+\item \textbf{Group Isomorphism Theorem III}
+\begin{spacing}{1.3}
+Let $G$ be a group, $N \lhd G, N \lhd G, N \subseteq H$. Then:
+
+\setlength{\leftskip}{20pt}1. $H/N \lhd G/N$
+
+2. $(G/N)/(H/N) \cong G/H$
+\end{spacing}
+
+
+%%%%%J
+\item \begin{spacing}{1.3}\textbf{Group Isomorphism Theorem IV $|$ Correspondence Theorem}
+
+Assume $f$ is an epimorphism from group $G_1$ to $G_2$, and the kernel of group homomorphism $f$ is $F = \text{ker} ~ f$. We have: 
+
+\setlength{\leftskip}{20pt}1. The map from a subgroup of $G_1$ that contains $N$ to a subgroup of $G_2$ is bijective.
+
+2. The bijection from the subgroup of $G_1$ that contains $N$ to the subgroup of $G_2$ is also a map from a normal subgroup onto a normal subgroup.
+
+3. For a normal subgroup $H \lhd G_1$ such that $H$ contains $N$, $G_1/H \cong G_2/f(H).$
+\end{spacing}
+
+\vspace{-0.2em}
+
+	\end{enumerate}
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 2: }Prove:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Assuming $f$ is a group homomorphism from group $G_1$ to $G_2$, we have ker $f \lhd G_1$.
+
+\vspace{0.5em}
+	\framebox(35.6em, 22em){}
+
+\vspace{0.5em}
+
+	\item Assuming $f$ is a group homomorphism from group $G_1$ to group $G_2$, then $$f \text{~is monomorphism} \iff \text{ker} ~ f = \{e_1\}, \text{~where} ~ e_1 \text{~is the identity of} ~ G_1.$$
+		\framebox(35.6em, 22em){}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 3: }\begin{spacing}{1.5}Define a binary operation $\circ$ in the integer set $\mathbb{Z}$ such that: \vspace{-1em}
+$$a \circ b = a + b - a \times b, ~~\forall a, b \in \mathbb{Z}.\vspace{-1em}$$
+Prove that $\{\mathbb{Z}, \circ\}$ is a monoid, and is isomorphic to a monoid of $\mathbb{Z}$ with respect to the operation multiplication "$\times$".\end{spacing}
+
+\vspace{1.5em}
+\setlength{\leftskip}{-12pt}\framebox(38em, 44em){}
+
+\newpage
+%%%%%%%%%%%%%%%%
+\setlength{\leftskip}{0pt}\paragraph*{Problem 4: }Let $G$ be a group, prove the following statements:
+$$m \longrightarrow m^{-1} \text{~is an automorphism of} ~ G \text{~if and only if} ~ G \text{~is an Abelian Group.}$$
+	\framebox(38em, 26em){}
+
+\vspace{1.5em}
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 5: }Assume $G$ is an abelian group, prove that
+$$\forall n \in \mathbb{Z}, m \longrightarrow m^n \text{~is an endomorphism of} ~ G$$
+	\framebox(38em, 16em){}
+
+
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 6: }
+\begin{spacing}{1.3}Let $\phi: G \longrightarrow H$ be a group homomorphism.
+
+\vspace{1em}
+\noindent Prove that $\phi(G)$ is abelian if and only if $\forall a, b \in G, aba^{-1}b^{-1} \in \text{ker} ~ \phi$.\end{spacing}
+
+\vspace{1.5em}
+\setlength{\leftskip}{-12pt}\framebox(38em, 44em){}
+
+
+\newpage
+%%%%%%%%%%%%%%%%
+\setlength{\leftskip}{0pt}\paragraph*{Problem 7: }\begin{spacing}{1.4}
+The map $\phi: \mathbb{Z} \longrightarrow \mathbb{Z}$ defined by $\phi(n) = n-1$ for $n \in \mathbb{Z}$ is bijective. Give the expression of the binary operation "*" on $\mathbb{Z}$ such that $\phi$ is isomorphic.
+$$\{\mathbb{Z}, \times\} \longrightarrow \{\mathbb{Z}, *\}$$
+	\framebox(38em, 18em){}
+\end{spacing}
+
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 8: }\begin{spacing}{1.4}
+The map $\phi: \mathbb{Q} \longrightarrow \mathbb{Q}$ defined by $\phi(n) = 2n+1$ for $n \in \mathbb{Q}$ is bijective. Give the expression of the binary operation "*" on $\mathbb{Q}$ such that $\phi$ is isomorphic.
+$$\{\mathbb{Q}, *\} \longrightarrow \{\mathbb{Q}, +\}$$
+	\framebox(38em, 18em){}
+\end{spacing}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+

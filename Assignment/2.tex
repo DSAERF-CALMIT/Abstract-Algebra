@@ -1,0 +1,246 @@
+\documentclass[12pt]{scrartcl}
+\title{Abstract Algebra Assignments}
+\nonstopmode
+\usepackage{graphicx}	% Required for including pictures
+\usepackage[figurename=Figure]{caption}
+\usepackage{float}    		% For tables and other floats
+\usepackage{amsmath}  	% For math
+\usepackage{bbm}  		% For mathBBM
+\usepackage{amssymb}  	% For more math
+\usepackage{fullpage} 	% Set margins and place page numbers at bottom center
+\usepackage{paralist} 	% paragraph spacing
+\usepackage{listings} 	% For source code
+\usepackage{enumitem} 	% useful for itemization
+\usepackage{siunitx}  	% standardization of si units
+\usepackage{tikz,bm} 	% Useful for drawing plots
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand\footrule{\hrule height1pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~Jinwei Zou}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+	\begin{center}
+		\hrule
+		\vspace{15pt}
+		{\textbf { \large Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~BinaryPhi}}
+	\end{center}
+
+	\thispagestyle{empty}
+	\indent {\textbf{Name:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Assignment:} Number 2 \vspace{5pt} \\
+	\indent {\textbf{Score:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Last Edit:} \today~PDT \vspace{8pt} \\
+	\hrule
+	\vspace{15pt}	
+
+%%%%%%%%%%%%%%%%
+	\paragraph*{Problem 1: Definitions}
+
+	\begin{enumerate}[label=(\alph*)]
+	
+
+	%%%%%A
+	\item Let "$\circ$" be the binary operation in the non-empty set $S$, and satisfies the following:
+	$$(a \circ b) \circ c = a \circ (b \circ c), ~~\forall a, b, c \in S.$$
+	Then, the algebraic system $\{S; \circ \}$ is called a \underline{\hbox to 70pt{}} ($S$ is a \underline{\hbox to 70pt{}} for short)
+	\vspace{\stretch{1}}
+
+	%%%%%B
+	\item
+	If two elements $e_1$ and $e_2$ in the semigroup satisfy:
+	\begin{align*}
+	&e_1 \circ a = a,\\
+	&a \circ e_2 = a, ~~\forall a \in S
+	\end{align*}
+	$e_1$ is called the \underline{\hbox to 90pt{}} of $S$, and $e_2$ is called the \underline{\hbox to 90pt{}} of $S$.\\
+	
+	If an element $e$ in the semigroup satisfies:
+	$$e \circ a = a \circ e = a, ~~\forall a \in S,$$
+	$e$ is called the \underline{\hbox to 100pt{}} of $S$. \\
+	\rule{0pt}{15pt}The semigroup that has \underline{\hbox to 100pt{}} is called a \underline{\hbox to 100pt{}}. 
+	\vspace{\stretch{1}}
+
+
+	%%%%%C
+	\item 
+	Assuming a monoid $\{S; \circ\}$ has the identity element $e$ and an element $a \in S$, if:
+	\begin{align*}
+	&a_1 \circ a = e,\\
+	&a \circ a_2 = e, ~~\forall a_1, a_2 \in S
+	\end{align*}	
+	$a_1$ is called the \underline{\hbox to 90pt{}} of $a$, and $a_2$ is called the \underline{\hbox to 90pt{}} of $a$.\\
+
+	If:
+	$$a_3 \circ a = a \circ a_3 = e, ~~\forall a_3 \in S,$$
+	$a_3$ is called the \underline{\hbox to 100pt{}} of $a$, and denoted by $a_3 = a^{-1}.$
+	\vspace{\stretch{1}}
+
+	%%%%%D
+	\item If every element in monoid $\{S; \circ\}$ is invertible, then $S$ is called a \underline{\hbox to 60pt{}}.
+
+\newpage
+
+	%%%%%E
+	\item A group is a set $S$ with an operation "$\circ$" that satisfies the following:
+		
+		\begin{itemize}[leftmargin=100pt]
+		\item[\textbf{Closure: }] \underline{\hbox to 220pt{}}; 
+		\item[\textbf{Associativity: }] \underline{\hbox to 220pt{}};
+		\item[\textbf{Identity: }] \underline{\hbox to 220pt{}};
+		\item[\textbf{Invertibility: }] \underline{\hbox to 220pt{}}; \\
+		\end{itemize} 
+
+
+	%%%%%F
+	\item Unilateral definition of the previous definition. Prove that a semigroup $S$ is a group if it satisfies the following: 
+		
+		\begin{itemize}[leftmargin=50pt]
+		\item $\forall a \in S, ~ \exists ~ b \in S$, so $b \circ a = e$;
+		\item $\forall a \in S, ~ \exists ~ e \in S$, so $e \circ a = a$; \\
+		\end{itemize} 
+	
+		\framebox(36.2em, 15em){}
+
+
+	%%%%%G
+	\item Interesting Question: Does the previous conclusions still hold if the semigroup has a left inverse and a right identity:
+
+		\begin{itemize}[leftmargin=50pt]
+		\item $\forall a \in S, ~ \exists ~ a^{-1} \in S$, so $a^{-1} \circ a = e$;
+		\item $\forall a \in S, ~ \exists ~ e \in S$, so $a \circ e = a$.\\
+		\end{itemize} 
+		\framebox(36.2em, 15em){}
+
+
+	%%%%%H
+	\item Let the operation "$\circ$" in an algebraic system be commutative, the group $\{S; \circ\}$ is called the \rule{0pt}{15pt}\underline{\hbox to 120pt{}} or \underline{\hbox to 150pt{}}. \\
+
+
+	%%%%%I
+	\item Prove that the operation "$\circ$" in group $\mathbb{G}$ is left(right) \textbf{Cancellative}: 
+	\begin{align*}
+	\forall a, b, c \in \mathbb{G}, ~ &a \circ b = a \circ c ~ \Longrightarrow ~ b = c \\
+	&b \circ a = c \circ a ~ \Longrightarrow ~ b = c.
+	\end{align*}
+	\framebox(36.2em, 12em){} \\
+
+	%%%%%J
+	\item The \rule{0pt}{20pt}number of elements in group $\mathbb{G}$ is called the \underline{\hbox to 60pt{}} of $\mathbb{G}$, denoted by $|\mathbb{G}|$. 
+
+	\begin{spacing}{1.2}If $|\mathbb{G}|$ is finite, we call $\mathbb{G}$ a \underline{\hbox to 100pt{}}.  If $|\mathbb{G}|$ has infinite order, we call $\mathbb{G}$ a \underline{\hbox to 100pt{}}.\end{spacing}
+
+	%%%%%K
+	\item \begin{spacing}{1.2}Assuming the group $\mathbb{G}$ has an operation (multiplication or addtion) and $a$ is an element of $\mathbb{G}$, if $\forall k \in \mathbb{N}$, $a^{k} \neq 1 (\neq e)$ or $ka \neq 0 (\neq e)$, we call the order of element $a$ is \underline{\hbox to 100pt{}}. If $\exists ~ k \in N$, $a^{k} = e$ or $ka = 0$, the order of element $a$ is \underline{\hbox to 200pt{}}. \end{spacing}
+
+
+	\end{enumerate}
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 2: Prove:}
+
+	\begin{enumerate}[label=\arabic*)]
+	
+	\item There is only one inverse element of any element $a$ in group $\mathbb{G}$.
+	\item For a group $\mathbb{G}$, $\forall a, b \in \mathbb{G}$, equations $a \circ x = b$ and $x \circ a = b$ have one and only one solution.
+	\item If $\forall a, b \in S$ for which $S$ is a semigroup, $S$ is a group if $a \circ x = b, ~ x \circ a = b$ both have solutions.\\
+
+	\framebox(36.2em, 44em){}
+
+	\end{enumerate}
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 3:} Check if the following options are semigroups, monoids, or groups?
+
+	\begin{enumerate}[label=\arabic*)]
+	
+	\item In $\mathbb{Z}$, $a \circ b = a - b$;
+
+	\item In $\mathbb{Z}$, $a \circ b = a + b + ab$;
+
+	\item In $\mathbb{Z}$, $a \circ b = a + b - ab$;\\
+
+	\framebox(36.2em, 45em){}
+
+	\end{enumerate}
+
+	\newpage
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 4:}
+
+	\begin{spacing}{1.2}Define operation "$\circ$" in $S=\{x ~ | ~ x \in \mathbb{R}, x \neq -1\}$: $a \circ b = a+ b+ ab$. Prove that $S$ is a group with respect to the operation "$\circ$". Then, solve equation $2 \circ x \circ 3 = 7$.\end{spacing}
+
+	\vspace{2em}
+	\framebox(37.6em, 50em){}
+
+	\newpage
+
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 5:} Prove: \\
+\setlength\parindent{12pt}
+
+\indent $\mathbb{G}$ is an Abelian Group if the order of every non-identity element is $2$. \\
+
+\framebox(37.2em, 12em){}
+
+\vspace{1em}
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 6:} Assuming $M$ is a monoid, $m \in M$. Define another multiplication rule "$\circ$": $a \circ b = amb$. \\
+
+\indent Prove that $M$ is a semigroup with respect to "$\circ$". \\ 
+
+\indent When is $M$ a monoid with respect to "$\circ$"?\\
+
+\framebox(37.2em, 25em){}
+
+
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 7:} \begin{spacing}{1.2}Assuming $M$ is a monoid with an identity element $e$. It is said that the element $a$ of $M$ is invertible if there exists an element $a^{-1}$ that satisfies $a^{-1} a = a a^{-1} = e.$ \end{spacing}
+\rule{0pt}{18pt}Prove the following statements: 
+
+\begin{enumerate}[label=\arabic*)]
+
+\item If $a,b,c \in M$ and $ab=ca=e$, then $a$ is invertible and $a^{-1} = b= c$. 
+\item If $a \in M$ is invertible, then $b = a^{-1}$ when and only when $aba=a, ~ ab^2a=e$.
+\item The sufficient prerequisite of $G$, the subset of $M$, being a group is that every element in $G$ is invertible and for all $g_1, g_2 \in G$, we have $g_1^{-1} g_2 \in G$.
+\item All invertible elements in $M$ is a group.\\
+
+\framebox(37.2em, 40em){}
+
+
+
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

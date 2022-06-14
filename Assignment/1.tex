@@ -1,0 +1,162 @@
+\documentclass[12pt]{scrartcl}
+\title{Abstract Algebra Assignments}
+\nonstopmode
+\usepackage{graphicx}	% Required for including pictures
+\usepackage[figurename=Figure]{caption}
+\usepackage{float}    	% For tables and other floats
+\usepackage{verbatim} 	% For comments and other
+\usepackage{amsmath}  	% For math
+\usepackage{amssymb}  	% For more math
+\usepackage{fullpage} 	% Set margins and place page numbers at bottom center
+\usepackage{paralist} 	% paragraph spacing
+\usepackage{listings} 	% For source code
+\usepackage{subfig}   	% For subfigures
+\usepackage{enumitem} 	% useful for itemization
+\usepackage{siunitx}  	% standardization of si units
+\usepackage{tikz,bm} 	% Useful for drawing plots
+\usepackage{fancyhdr}
+
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand\footrule{\hrule height1pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~Jinwei Zou}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+	\begin{center}
+		\hrule
+		\vspace{15pt}
+		{\textbf { \large Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~BinaryPhi}}
+	\end{center}
+
+	\thispagestyle{empty}
+	\indent {\textbf{Name:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Assignment:} Number 1 \vspace{5pt} \\
+	\indent {\textbf{Score:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Last Edit:} \today~PDT \vspace{8pt} \\
+	\hrule
+	\vspace{15pt}	
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 1: Definitions}
+
+	\begin{enumerate}[label=(\alph*)]
+
+	\item Assuming $A$ and $B$ are two sets, the \textbf{Direct Product} (or \underline{\hbox to 85pt{}}) of set $A$ and set $B$ is defined as $$A \times B = \{ \underline{\hbox to 160pt{} } \}.$$ \\
+
+	\item Assuming $A$, $B$ and $C$ are three non-empty sets, the mapping from $A \times B$ to $C$ is called a(an)  \underline{\hbox to 120pt{}}. \\
+
+	\item Most of the time, we have $A=B=C$(an algebraic operation from $A$ and $A$ to $A$), which is called the \underline{\hbox to 120pt{}} in $A$. \\
+
+	\item \textbf{Associative Property} denotes to a type of binary operation "$\circ$" in set $A$ if $$\underline{\hbox to 120pt{}}, \forall a, b, c \in A.$$ \\
+
+	\item \textbf{Commutative Property} denotes to a type of binary operation "$\circ$" in set $A$ if $$\underline{\hbox to 120pt{}}, \forall a, b \in A.$$ \\
+
+	\item "$\circ$" is left-distributive over "$+$" if $$\underline{\hbox to 120pt{}}, \forall a, b, c \in A.$$
+	"$\circ$" is right-distributive over "$+$" if $$\underline{\hbox to 120pt{}}, \forall a, b, c \in A.$$
+	"$\circ$" is \textbf{Distributive} over "$+$" if it is both left- and right-distributive. \\
+
+	\item Assuming $A$ is a non-empty set and $R$ is a subset of $A \times A$, $a, b \in A$, if $(a, b) \in R$, we define that $a$ and $b$ have a relation $R$, denoted by \underline{\hbox to 100pt{}}. $R$ denotes a \textbf{relation} of $A$.  \\
+
+	\item An \textbf{Equivalent Relation} $R$ from set $A$ satisfies the following, $\forall (a, b, c) \in A$:
+		\subitem 1. \underline{\hbox to 80pt{}}  Property: \underline{\hbox to 120pt{}}		
+		\subitem 2. \underline{\hbox to 80pt{}}  Property: \underline{\hbox to 120pt{}}
+		\subitem 3. \underline{\hbox to 80pt{}}  Property: \underline{\hbox to 120pt{}} \\
+
+
+	\item A set of non-empty subsets of $A$, such that every element of $A$ is included in exactly one subset of $A$, is defined as a \underline{\hbox to 80pt{}} of set $A$. \\
+	
+	\item Assuming $R$ is an equivalent relation in set $A$, $a \in A$, the set of all elements that have the relation $R$ with $a$: $\{b \in A ~ | ~ bRa\}$, is defined as the \underline{\hbox to 120pt{}} of $a$ (also denoted by \underline{\hbox to 20pt{}}). $a$ is called \textbf{representative} of the class. \\
+
+	\item Assuming $R$ is an equivalent relation in set $A$, then the set of all equivalence classes of $A$ with respect to the relation $R$: $\{\bar{a} ~ | ~ a \in A\}$, is called the \underline{\hbox to 120pt{}} of $A$ by $R$, and is denoted by \underline{\hbox to 80pt{}}. \\
+
+	\item Assuming $R$ is an equivalent relation in set $A$, then the map $$\iota: A \rightarrow A/R, ~\iota(a) = \bar{a}, ~\forall a \in A,$$ is called the \underline{\hbox to 120pt{}} from $A$ to $A/R$. \\
+
+	\item Assuming a binary operation "$\circ$" is in set $A$, if an equivalent relation $R$ of $A$ satisfies under this binary operation: $$\underline{\hbox to 220pt{}},$$ we denotes $R$ to be a \textbf{Congruence Relation} with respect of operation "$\circ$". For the equivalence class of $a$, $\bar{a}$ is called the \underline{\hbox to 120pt{}}. 
+
+	\end{enumerate}
+
+\newpage
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 2: } Justify if $R$ of each of the following relation is an equivalence relation:
+
+	\begin{enumerate}[label=\arabic*)]
+	
+	\item For two $m \times n$ matrix $A$ and $B$, we have $ARB$ if there exists an invertible $n \times n$ matrix $P$ and an invertible $m \times m$ matrix $Q$ that satisfy $A=PBQ$.\\
+
+	\framebox(36.2em, 12em){}\\
+
+	\item For two $m \times n$ matrix $A$ and $B$, we have $ARB$ if there exists an $n \times n$ matrix $P$ and an $m \times m$ matrix $Q$ that satisfy $A=PBQ$.\\
+
+	\framebox(36.2em, 12em){}\\
+
+	\item For two $m \times m$ matrix $A$ and $B$, we have $ARB$ if there exists an invertible $n \times n$ matrix $P$ that satisfy $A=PBP^{-1}$.\\
+
+	\framebox(36.2em, 12em){}
+
+	\end{enumerate}
+
+\newpage
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 3: } Which of the following binary operation "$\sim$" has commutative property? Which of the following has associative property?
+
+	\begin{enumerate}[label=\arabic*)]
+
+	\item $a \sim b = a - b, ~~\forall a, b \in \mathbb{Z};$\\
+
+	\framebox(36.2em, 9.2em){}
+
+	\item $a \sim b = a^b, ~~\forall a, b \in \mathbb{N};$\\
+
+	\framebox(36.2em, 9.2em){}
+
+	\item $a \sim b = a^bb^a, ~~\forall a, b \in \mathbb{N};$\\
+
+	\framebox(36.2em, 9.2em){}
+
+	\item $a \sim b = a^2b^2, ~~\forall a, b \in \mathbb{Q};$\\
+
+	\framebox(36.2em, 9.2em){}
+
+
+
+	\end{enumerate}
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 4: } Assuming $R$ is an equivalence relation in set $A$ and "$\circ$" is an operation in $A$, the operation "$\bar{\circ}$" in the quotient set $A/R$ is: $$\overline{a \vphantom{b}} ~ \overline{\circ \vphantom{b}} ~ \overline{b} = \overline{a \circ b}, ~~\forall a, b \in A.$$
+
+\noindent Prove that the sufficient prerequisite for "$\bar{a \vphantom{b}} = \bar{c \vphantom{b}}, ~ \bar{b} = \bar{d} \Longrightarrow (\overline{a \circ b}) = (\overline{c \circ d})$" is that $R$ is a congruence relation in $A$ with respect to operation "$\circ$".\\
+
+
+	\framebox(0.96\textwidth, 40em){}
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
