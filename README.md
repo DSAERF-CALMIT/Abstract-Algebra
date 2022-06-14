@@ -17,7 +17,7 @@
 
 [**All LaTeX Notes Abstract Algebra**](https://github.com/DSAERF-CALMIT/Abstract-Algebra/tree/main/Note)
 
-[Abstract Algebra LaTeX Note 1](https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Note/note01.tex)
+[Abstract Algebra LaTeX Note 1](https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/~1.tex)
 
 [Abstract Algebra LaTeX Note 2](https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Note/note02.tex)
 
