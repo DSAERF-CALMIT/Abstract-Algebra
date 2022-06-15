@@ -16,7 +16,7 @@
 
 ## LaTeX Lecture Notes are currently updating ...
 
-[**All LaTeX Notes Abstract Algebra**](https://github.com/DSAERF-CALMIT/Abstract-Algebra/tree/main/Note)
+[**All LaTeX Notes Abstract Algebra**](https://github.com/DSAERF-CALMIT/Abstract-Algebra/tree/main/Assignment)
 
 [Abstract Algebra LaTeX Note 1](https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/~1.tex)
 
