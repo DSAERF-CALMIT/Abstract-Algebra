@@ -1,405 +1,155 @@
-<!DOCTYPE HTML>
-<!--Version-3.0.0-->
-<html lang="en">
+<!DOCTYPE html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="BinaryPhi">
-    <meta name="description" content="Mathmetics, Physics, etc.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="renderer" content="webkit|ie-stand|ie-comp">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Abstract Algebra</title>
+<style>
+    p,
+    li {
+        font-size: 18px;
+    }
+</style>
 
-    <meta property="og:image" content="/ImgIco/RF.png">
-    <meta property="og:url" content="https://binaryphi.site">
-    <meta property="og:type" content="webpage">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@CALMIT_DSAERF">
+<body>
+    <textarea style="display:none; font-size: 18px;">        
+    
+<h1 style="margin-top: 30px;">
+    MATH-065 (Abstract Algebra) 2022 Summer
+</h1>
 
-    <title>Club | Home</title>
-    <link rel="icon" type="image/png" href="/ImgIco/ic-gold.ico">
+<p>
+    Why 065? The corresponding decimal number for **A**(bstract Algebra) in [ASCII](https://www.ibm.com/docs/en/aix/7.3?topic=adapters-ascii-decimal-hexadecimal-octal-binary-conversion-table) is 65.
+</p>
 
+<br>
 
-    <link rel="stylesheet" type="text/css" href="/CSS-JS/BPmainCSS.css">
-
-    <script src="/CSS-JS/jquery.min.js"></script>
-    <script src="/CSS-JS/bp-Navbar.js"></script>
-
-</head>
-
-<body style="background-color: rgb(0, 0, 0);">
-    <h1 class="content-to-show-500 content-to-hide-300" style="color: white; z-index: 999; position: absolute; top: 40%; left: 35%; transform: translate(0, -50%);">Use <br> Larger <br> Devices~</h1>
-    <header class="content-to-hide-500">
-        <nav id="GradChange" style="height: 80px;">
-            <div class="nav-wrapper container" style="line-height: 80px;">
-                <div class="brand-logo">
-                    <a href="/" class="waves-effect waves-light">
-                        <div>
-                            <img src="/ImgIco/logo-gold.png" class="logo-img" alt="LOGO" style="height: 53px; vertical-align: middle;">
-                            <span class="logo-span" style="font-size: 18px;"></span>
-                        </div>
-                    </a>
-                </div>
+<!--####################-->
+### About the course
 
 
-                <a href="#" data-target="mobNavT" class="sidenav-trigger content-to-hide-500">
-                    <i class="fas fa-bars"></i>
-                </a>
-                
-                <ul style="float: right;">
-                    <!--<li class="hide-on-med-and-down">
-                        <a href="/" class="waves-effect waves-light">
-                            <i class="fas fa-home" style="zoom: 0.6;"></i>
-                            <span>Home</span>
-                        </a>
-                    </li>-->
+- #### Abstract
 
-                    <li class="hide-on-med-and-down">
-                        <a href="/BP-mathematics/index.html" class="waves-effect waves-light">
-                            <i class="iconfont icon-math" style="zoom: 0.6;"></i>
-                            <span>Mathematics</span>
-                        </a>
-                    </li>
+    As a matter of fact, algebra is abstract, especially when digging into areas such as the algebraic structure, which is one of the most important concentrations in abstract algebra.
 
-                    <li class="hide-on-med-and-down">
-                        <a href="/BP-physics/index.html" class="waves-effect waves-light">
-                            <i class="iconfont icon-icons-physics" style="zoom: 0.6;"></i>
-                            <span>Physics</span>
-                        </a>
-                    </li>
+- #### What is Algebraic Structure
 
-                    <li class="hide-on-med-and-down">
-                        <a href="/BP-cybersecurity/index.html" class="tooltipped" data-tooltip="Currently Unavailable"
-                            data-position="bottom" data-delay="50">
-                            <i class="iconfont icon-hacker" style="zoom: 0.6;"></i>
-                            <span>Cyber Security</span>
-                        </a>
-                    </li>
+    - Groups
 
-                    <li class="hide-on-med-and-down">
-                        <a href="/BP-engineering/index.html" class="tooltipped" data-tooltip="Currently Unavailable"
-                            data-position="bottom" data-delay="50">
-                            <i class="iconfont icon-engineering" style="zoom: 0.6; font-size: 28px;"></i>
-                            <span>Engineering</span>
-                        </a>
-                    </li>
+    - Rings
 
-                    <li class="hide-on-med-and-down">
-                        <a href="/LoginSignin/index.html" target="_blank" class="waves-effect waves-light">
-                            <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
-                            <span style="font-weight: bolder;">Login | Signin</span>
-                        </a>
-                    </li>
+    - Vector Space $\rightleftharpoons$ Fields
 
-                </ul>
+    - Lattice
 
-                <div id="mobNavT" class="sidenav">
-                    <div class="mobile-head bg-color" style="padding: 0 15px;">
-                        <img src="/ImgIco/ic-gold.ico" style="margin-left: 10px; margin-top: 30px; width: 75px; height: 75px;">
+    - Et cetera
 
-                        <div style="color: white; margin-top: -30px; padding-left: 10px; font-size: 1.5rem;">
-                            BinaryPhi
-                        </div>
-                        <div class="mobNavDesc">
-                            Feel the Charm of Numbers and Images & Algebra and Goemetry.
-                            <br>
-                            Reveal the Properties of the Nature.
-                            <br>
-                            Investigate the Mechanism of the World.
-                            <br>
-                        </div>
-                    </div>
+- #### Applications
 
 
-                    <ul class="menu-list mobile-menu-list">
-                        <!--<li>
-                            <a href="/" class="waves-effect waves-light">
-                                <i class="fa-fw fas fa-home"></i>
-                                Home
-                            </a>
-                        </li>-->
+<br>
+<!--####################-->
+### Syllabus
 
-                        <li>
-                            <a href="/BP-mathematics/index.html" class="waves-effect waves-light">
-                                <i class="fa-fw iconfont icon-math"></i>
-                                Mathematics
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/BP-physics/index.html" class="waves-effect waves-light">
-                                <i class="fa-fw iconfont icon-icons-physics"></i>
-                                Physics
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/BP-cybersecurity/index.html" class="waves-effect waves-light">
-                                <i class="fa-fw iconfont icon-hacker"></i>
-                                Cyber Security
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/BP-engineering/index.html" class="waves-effect waves-light">
-                                <i class="fa-fw iconfont icon-engineering"></i>
-                                Engineering
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/web/404/index.html" class="waves-effect waves-light">
-                                <i class="fa-fw fa-fw fas fa-user-circle"></i>
-                                About Us
-                            </a>
-                        </li>
+<!--####################-->
+### Assignments
 
 
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+| Assignment Number | File |
+| :---------------: | :--: |
+| See Description below | PDF | TeX-View | TeX-GithubRaw |
+| Assignment 1 | [1.pdf][1] | [1-tex.html][2] | [1.tex][3] |
+| Assignment 2 | [2.pdf][7] | [2-tex.html][8] | [2.tex][9] |
+| Assignment 3 | [3.pdf][13] | [3-tex.html][14] | [3.tex][15] |
+| Assignment 4 | [4.pdf][19] | [4-tex.html][20] | [4.tex][21] |
+| Assignment 5 | [5.pdf][25] | [5-tex.html][26] | [5.tex][27] |
+
+```
+You can use TeX-View to view the LaTeX code if you are not able to access GitHub.
+```
 
 
-    <div class="content-to-hide-500" id="TOP">
+<!--####################-->
+### Assignments Solutions := Lecture Notes
 
-        <div class="bg-cover" style="box-shadow: #060006 0px -12px 14px 14px inset; height: 100vh;">
-            <div class="container">
-                <div class="row">
-                    <div class="content-to-hide-800 col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-                        <div class="brand">
+| Description | File |
+| :---------------: | :---------: | :----: |
+| | PDF | TeX-View | TeX-GithubRaw |
+| Pre - Abstract Algebra | [Answer-1.pdf][4] | [Answer-1-tex.html][5] | [Answer-1.tex][6] |
+| Semigroups & Groups | Answer-2.pdf | Answer-2-tex.html | Answer-2.tex |
+| Subgroups & Quotient Groups | Answer-3.pdf | Answer-3-tex.html | Answer-3.tex |
+| Homomorphism & Isomorphism | Answer-4.pdf | Answer-4-tex.html | Answer-4.tex |
+| Specific Group - Cyclic Group | Answer-5.pdf | Answer-5-tex.html | Answer-5.tex |
 
-                            <div class="title"
-                                style="background-image: url(/ImgIco/logo-white.png); background-repeat: no-repeat; background-position: center; background-size: 218px 100px; background-color: rgba(255, 180, 255, 0.1); border-radius: 10px; font-size: 50px; color: rgb(255, 255, 255); height: 130px;">
+```
+You can use TeX-View to view the LaTeX code if you are not able to access GitHub.
+```
 
-                            </div>
+<!--####################-->
+### Videos (Not Available)
 
-                        </div>
-                    </div>
-                </div>
-
-                <script>
-                    $('.bg-cover').css('background-image', 'url(/ImgIco/calabiYau.png)');
-                </script>
-
-                <div class="content-to-hide-500 cover-btns" style="margin-bottom:10px">
-                    <a href="#indexCard" class="btn" id="hypref">
-                        Club Info!
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
+<!--####################-->
+### Exams (Not Available)
 
 
-    <div id="content" class="content-to-hide-500">
-        <section class="verSpace">
-            <div class="container" style="background-color: rgba(255, 150, 225, 0.05); border-radius: 20px; display: table;">
-                <div class="row" style="margin-top: 15px;">   
+[1]: ./assignment/1.pdf
+[2]: ./assignment/1.html
+[3]: https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/1.tex
+[4]: ./assignment/~1.pdf
+[5]: ./assignment/~1.html
+[6]: https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/~1.tex
 
-                    <div class="col-lsp" id="subf" style="padding-left: 5%;">
-                        <h2 id="indexCard" style="font-size: 24px; color: rgb(255, 255, 255); margin-top: 1.5rem; margin-right: 1000px;">
-                            Administrative
-                        </h2>
-                    </div>
-                    
-                    <div class="col-lsp content-to-hide-800" id="subf" style="padding-left: 3%; padding-bottom: 2.5rem;">
-                        <a href="#TOP" class="btn" id="hyprefci">
-                            <img class="rounded" src="/ImgIco/math.jpg" alt="project image" style="border-radius: 12px; max-width: 100%; box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);">
-                        </a>
-                    </div>
-                    
-                    <div class="col-lspecial" style="padding-left: 5%; padding-right: 2%;">
-                        <div class="row" style="margin-bottom: 1.5rem;">
-                            <div class="col-10">
-                                <h5
-                                    style="color: rgb(248, 225, 225); font-weight: bold; font-size: 1.45em; margin-top: 10px; margin-bottom: 15px;">
-                                    Academic President</h5>
-
-                                <span style="font-size: medium; color: #9e9e9e;">
-                                    <a href="mailto:z2047ds@gmail.com" style="color: rgba(224, 224, 224, 0.95); line-height: 1.8;">
-                                        Jinwei Zou
-                                    </a>
-                                    (Mathematics; Physics; CyberSecurity; Engineering)
-                                </span>
-
-                            </div>
-                        </div>
-                        <div class="row" style="margin-bottom: 1.5rem;">
-                            <div class="col-10">
-                                <h5
-                                    style="color: rgb(248, 225, 225); font-weight: bold; font-size: 1.4em; margin-top: 10px; margin-bottom: 15px;">
-                                    Academic Vice President
-                                </h5>
-
-                                <span style="font-size: medium; color: #9e9e9e;">
-                                    <a href="mailto:chenyuchen995@gmail.com" style="color: rgba(224, 224, 224, 0.95); line-height: 1.8;">
-                                        Yuchen Chen
-                                    </a>
-                                    (Mathematics; Physics; Bio-Engineering)
-                                </span>
-
-                            </div>
-                        </div>
-                        <div class="row" style="margin-bottom: 1.5rem;">
-                            <div class="col-10">
-                                <h5
-                                    style="color: rgb(248, 225, 225); font-weight: bold; font-size: 1.4em; margin-top: 10px; margin-bottom: 15px;">
-                                    Administrative
-                                    Presidents
-                                </h5>
-
-                                <span style="font-size: medium; color: #9e9e9e;">
-                                    <a href="mailto:z2047ds@gmail.com" style="color: rgba(224, 224, 224, 0.95); line-height: 1.8;">
-                                        Jinwei Zou
-                                    </a>
-                                    (Mathematics; Physics; CyberSecurity; Engineering)
-                                </span>
-                                <br>
-                                <span style="font-size: medium; color: #9e9e9e;">
-                                    <a href="mailto:chenyuchen995@gmail.com" style="color: rgba(224, 224, 224, 0.95); line-height: 1.8;">
-                                        Yuchen Chen
-                                    </a>
-                                    (Mathematics; Physics; Bio-Engineering)
-                                </span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="row section-margin">
-            <div id="BPEzm" class="col-lg-3 col-md-6 col-sm-12"
-                style="background-image: url(/ImgIco/background-bin.png);">
-                <a href="/BP-mathematics/index.html" style="color: white;">
-                    <div class="quarPadding">
-                        <div class="h5" id="quarBlocksT">
-                            Binary
-                        </div>
-                        <p class="mt-5" id="quarBlocksC">
-                            Feel the Beauty of Numbers and Images. Feel the Charm of Algebra and Goemetry.
-                        </p>
-                        <p id="quarBlocksR">
-                            (Mathematics)
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-            <div id="BPEzm" class="col-lg-3 col-md-6 col-sm-12"
-                style="background-image: url(/ImgIco/background-phy.png);">
-                <a href="/BP-physics/index.html" style="color: white;">
-                    <div class="quarPadding">
-                        <div class="h5" id="quarBlocksT">
-                            Phi
-                        </div>
-                        <p class="mt-5" id="quarBlocksC">
-                            Investigate the Properties of the Nature. Reveal the Mechanism of the World.
-                        </p>
-                        <p id="quarBlocksR">
-                            (Physics)
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-            <div id="CSzm" class="col-lg-3 col-md-6 col-sm-12"
-                style="background-image: url(/ImgIco/background-cs.png);">
-                <a href="/BP-cybersecurity/index.html" style="color: white;">
-                    <div class="quarPadding">
-                        <div class="h5" id="quarBlocksT">
-                            CS
-                        </div>
-                        <p class="mt-5" id="quarBlocksC">
-                            Avoid Privacy Leaks. Enhance the Awareness of Prevention from Attackers.
-                        </p>
-                        <p id="quarBlocksR">
-                            (Cyber Security)
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-            <div id="BPEzm" class="col-lg-3 col-md-6 col-sm-12"
-                style="background-image: url(/ImgIco/background-engr.png);">
-                <a href="/BP-engineering/index.html" style="color: white;">
-                    <div class="quarPadding">
-                        <div class="h5" id="quarBlocksT">
-                            ENGR
-                        </div>
-                        <p class="mt-5" id="quarBlocksC">
-                            Apply Everything You Have Learned. Improve the Quality of Our Life.
-                        </p>
-                        <p id="quarBlocksR">
-                            (Engineering)
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-        </section>
-
-    </div>
+[7]: ./assignment/2.pdf
+[8]: ./assignment/2.html
+[9]: https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/2.tex
 
 
-    <footer style="background-color: rgba(0, 0, 0, 0.425); height: 50vh; margin-left: 3.2%; margin-right: 3.2%; border-width: 2px ; border-style: inset; border-image: linear-gradient(to bottom, #ffffff4a, #ffffff10, #ffffff05, #000000) 10 30 50 100;" class="content-to-hide-500">
-        <div
-            style="text-align: center; margin-bottom: -200px;color: rgb(171, 171, 171); background-color: rgba(0,0,0,0.505);">
-            <p style="margin-left: 7%; margin-right: 7%; line-height: 20px;">
-                Designed By:
-                <a href="https://github.com/DSAERF-CALMIT" target="_blank" style="color: rgb(255,255,255);"
-                    class="tooltipped" data-tooltip="Github Homepage" data-position="top" data-delay="50">
-                    DSAERF-CALMIT
-                </a>
-                - More on
-                <a href="https://twitter.com/CALMIT_DSAERF" style="color: rgb(255,255,255);" class="tooltipped"
-                    data-tooltip="My Twitter Homepage (Secret)" data-position="top" data-delay="50">
-                    Twitter
-                </a>
-                - Contact Us Through
-                <a href="mailto:z2047ds@gmail.com" style="color: rgb(255,255,255);" class="tooltipped"
-                    data-tooltip="Email Address" data-position="top" data-delay="50">
-                    Email
-                </a>
-                - Choose to
-                <a href="../donation.html" target="_blank" class="tooltipped" data-tooltip="Donation"
-                    data-position="top" data-delay="50" style="color: rgb(255,255,255);">
-                    Donate
-                </a>
-            </p>
-            <!--<a href="https://beian.miit.gov.cn/" target="_blank" style="font-size: 16px; text-decoration-color: none; line-height: 20px;" class="tooltipped" data-tooltip="Legal Check" data-position="top" data-delay="50">
-                        <!--<img src="/ImgIco/icp.png" style="margin-bottom: 5px;"> -->
-            Legal Check is Unavailable due to Privacy Issues.
-            </a>
 
-        </div>
-    </footer>
 
-    <div class="progress-bar" style="left: -8px; height:5px"></div>
+[13]: ./assignment/3.pdf
+[14]: ./assignment/3.html
+[15]: https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/3.tex
 
-    <script>
-        $('#hypref').click(function () {
-            $('html, body').animate({
-                scrollTop: $($.attr(this, 'href')).offset().top - 120
-            }, 500);
-            return false;
-        });
-        $('#hyprefci').click(function () {
-            $('html, body').animate({
-                scrollTop: $($.attr(this, 'href')).offset().top
-            }, 500);
-            return false;
+
+
+
+[19]: ./assignment/4.pdf
+[20]: ./assignment/4.html
+[21]: https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/4.tex
+
+
+
+
+[25]: ./assignment/5.pdf
+[26]: ./assignment/5.html
+[27]: https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/5.tex
+
+
+
+<hr style="margin-top: 40px; margin-bottom: 40px; border: solid 1px rgba(105, 105, 105, 0.5);">
+
+<span style="font-size: larger; line-height: 40px;">**See** 
+    <a href="/~AliothZou/" target="_blank">
+        **All My Courses.**
+    </a>
+</span>
+
+<span style="font-size: larger; line-height: 40px;">**See** 
+    <a href="/" target="_blank">
+        **Club Website**
+    </a>
+</span>
+
+
+    </textarea>
+
+    <script src="https://binaryphi.site/mdConfig/strapdown.js"></script>
+    <script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+        }
         });
     </script>
-
-
 
 </body>
 
