@@ -67,36 +67,36 @@ You can use TeX-View to view the LaTeX code if you are not able to access GitHub
 You can use TeX-View to view the LaTeX code if you are not able to access GitHub.
 ```
 
-[1]: ./assignment/1.pdf
-[2]: ./assignment/1.html
+[1]: https://binaryphi.site/~AliothZou/MATH-065/assignment/1.pdf
+[2]: https://binaryphi.site/~AliothZou/MATH-065/assignment/1.html
 [3]: https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/1.tex
-[4]: ./assignment/~1.pdf
-[5]: ./assignment/~1.html
+[4]: https://binaryphi.site/~AliothZou/MATH-065/assignment/~1.pdf
+[5]: https://binaryphi.site/~AliothZou/MATH-065/assignment/~1.html
 [6]: https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/~1.tex
 
-[7]: ./assignment/2.pdf
-[8]: ./assignment/2.html
+[7]: https://binaryphi.site/~AliothZou/MATH-065/assignment/2.pdf
+[8]: https://binaryphi.site/~AliothZou/MATH-065/assignment/2.html
 [9]: https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/2.tex
 
 
 
 
-[13]: ./assignment/3.pdf
-[14]: ./assignment/3.html
+[13]: https://binaryphi.site/~AliothZou/MATH-065/assignment/3.pdf
+[14]: https://binaryphi.site/~AliothZou/MATH-065/assignment/3.html
 [15]: https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/3.tex
 
 
 
 
-[19]: ./assignment/4.pdf
-[20]: ./assignment/4.html
+[19]: https://binaryphi.site/~AliothZou/MATH-065/assignment/4.pdf
+[20]: https://binaryphi.site/~AliothZou/MATH-065/assignment/4.html
 [21]: https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/4.tex
 
 
 
 
-[25]: ./assignment/5.pdf
-[26]: ./assignment/5.html
+[25]: https://binaryphi.site/~AliothZou/MATH-065/assignment/5.pdf
+[26]: https://binaryphi.site/~AliothZou/MATH-065/assignment/5.html
 [27]: https://raw.githubusercontent.com/DSAERF-CALMIT/Abstract-Algebra/main/Assignment/5.tex
 
 
