@@ -131,7 +131,7 @@
 		\vspace{\stretch{0.5}}
 		\fbox{\begin{minipage}{35.5em}
 		\begin{spacing}{1.1}
-		No: Assuming a semigroup with operation $a \circ b = a \cdot \sqrt{b^2} = a|b|$ with an identity element $e$. For any element $m$, $m \circ e = m$. However, for instance, for a nagetive $m$, we have $e \circ m = e|m| \neq m$. Thus, although the right identity exists in this scenario, the left identity doesn't exist. \\ \end{spacing}
+		No: Assuming a semigroup with operation $a \circ b = a \cdot \sqrt{b^2} = a|b|$ with an identity element $e$. For any element $m$, $m \circ e = m$. However, for instance, for a nagetive $m$, we have $e \circ m = e|m| \neq m$. Thus, although the right identity exists in this scenario, the left identity does not exist. \\ \end{spacing}
 
 		No: Let $G = \big\{ (\begin{smallmatrix} x & y\\ 0 & 0 \end{smallmatrix}) ~ \big| ~ x, y \in \mathbb{Q}, x \neq 0 \big\}$. 
 
@@ -276,7 +276,7 @@ If $|\mathbb{G}|$ is finite, we call $\mathbb{G}$ a \underline{\textbf{Finite Gr
 
 		\noindent \underline{Inverse Element:\vphantom{y}}
 		$$i \circ b = i + b + ib \Longrightarrow i = -1, ~ (-1) \circ b = (-1) + b + (-1)b = -1;$$
-		\indent Thus, for $i = -1$, the inverse element doesn't exist.\\
+		\indent Thus, for $i = -1$, the inverse element does not exist.\\
 
 		\noindent Therefore, $\{G; \circ \}$ is a monoid (with commutative binary operation).
 	\end{minipage}}
@@ -294,7 +294,7 @@ If $|\mathbb{G}|$ is finite, we call $\mathbb{G}$ a \underline{\textbf{Finite Gr
 
 		\noindent \underline{Inverse Element:\vphantom{y}}
 		$$i \circ b = i + b - ib \Longrightarrow i = 1, ~ 1 \circ b = 1 + b - 1b = 1;$$
-		\indent Thus, for $i = 1$, the inverse element doesn't exist.\\
+		\indent Thus, for $i = 1$, the inverse element does not exist.\\
 
 		\noindent Therefore, $\{G; \circ \}$ is a monoid (with commutative binary operation).
 	\end{minipage}}
@@ -440,7 +440,8 @@ Prove the following statements:
 	\vspace{0.3em}
 	$\Longrightarrow:$ If $G$ is a group, then every element $g$ of $G$ is invertible and every inverse of the element $g^{-1} \in G$. Then, we have: $\forall g_1, g_2 \in G \Longrightarrow g_1^{-1}g_2 \in G.$\\
 
-	$\Longleftarrow:$ If $g \in G$ and $g$ is invertible and $g_1, g_2 \in G$, when $g_1 = g_2 = g \Longrightarrow g_1^{-1}g_2 = e \in G$ (Inverse), and $g_1^{-1} = g_1^{-1}e \in G$ (Identity). Additionally, $g_1^{-1}g_2 \in G \Longrightarrow (g_1^{-1})^{-1}g_2 = g_1 g_2 \in G$ (Closure). 
+	$\Longleftarrow:$ If $g \in G$ and $g$ is invertible and $g_1, g_2 \in G$, when $g_1 = g_2 = g \Longrightarrow g_1^{-1}g_2 = e \in G$, and $g_1^{-1} = g_1^{-1}e \in G$ (Identity). Additionally, $g_1^{-1}g_2 \in G \Longrightarrow (g_1^{-1})^{-1}g_2 = g_1 g_2 \in G$ (Closure). (All Elements are invetible; Associative law is apparent).
+Therefore, $G$ is a group.
 	\vspace{0.2em}\end{minipage}}
 \end{spacing}
 
