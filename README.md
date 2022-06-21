@@ -1,6 +1,6 @@
 # Abstract-Algebra : [MATH-065](https://binaryphi.site/~AliothZou/MATH-065/) 2022 Summer
 
-[![Commit](https://img.shields.io/github/commit-activity/m/DSAERF-CALMIT/Abstract-Algebra?label=Commits)](https://github.com/DSAERF-CALMIT/Abstract-Algebra/commits/main)
+[![Commit](https://img.shields.io/github/commit-activity/y/DSAERF-CALMIT/Abstract-Algebra?color=red)](https://github.com/DSAERF-CALMIT/Abstract-Algebra/commits/main)
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](https://github.com/DSAERF-CALMIT/Abstract-Algebra/blob/master/LICENSE.md)
 
 <br>
@@ -74,11 +74,11 @@ Why 065? The corresponding decimal number for <b>A</b>(bstract Algebra) in <a hr
 | :---------------: | :--: | :--: | :-: | :-: |
 | See descriptions below | PDF | TeX-View | TeX-GithubRaw | |
 | Assignment 1 | [1.pdf][1] | [1-tex.html][2] | [1.tex][3] | Jun 12th, 2022 |
-| Assignment 2 | [2.pdf][7] | [2-tex.html][8] | [2.tex][9] | Jun 13th, 2022 |
-| Assignment 3 | [3.pdf][13] | [3-tex.html][14] | [3.tex][15] | Jun 20th, 2022 |
-| Assignment 4 | [4.pdf][19] | [4-tex.html][20] | [4.tex][21] | Jun 22th, 2022 |
-| Assignment 5 | [5.pdf][25] | [5-tex.html][26] | [5.tex][27] | Jun 24th, 2022 |
-| Assignment 6 | [6.pdf][31] | [6-tex.html][32] | [6.tex][33] | Jun 27th, 2022 |
+| Assignment 2 | [2.pdf][7] | [2-tex.html][8] | [2.tex][9] | Jun 20th, 2022 |
+| Assignment 3 | [3.pdf][13] | [3-tex.html][14] | [3.tex][15] | ~ |
+| Assignment 4 | [4.pdf][19] | [4-tex.html][20] | [4.tex][21] | ~ |
+| Assignment 5 | [5.pdf][25] | [5-tex.html][26] | [5.tex][27] | ~ |
+| Assignment 6 | [6.pdf][31] | [6-tex.html][32] | [6.tex][33] | ~ |
 
 ```
 You can use TeX-View to view the LaTeX code if you are not able to access GitHub.
