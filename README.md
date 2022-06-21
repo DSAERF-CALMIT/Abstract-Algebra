@@ -1,6 +1,6 @@
 # Abstract-Algebra : [MATH-065](https://binaryphi.site/~AliothZou/MATH-065/) 2022 Summer
 
-[![Commit](https://img.shields.io/github/commit-activity/y/DSAERF-CALMIT/Abstract-Algebra?color=red)](https://github.com/DSAERF-CALMIT/Abstract-Algebra/commits/main)
+[![Commit](https://img.shields.io/github/commit-activity/y/DSAERF-CALMIT/Abstract-Algebra?label=Commits&color=blue)](https://github.com/DSAERF-CALMIT/Abstract-Algebra/commits/main)
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](https://github.com/DSAERF-CALMIT/Abstract-Algebra/blob/master/LICENSE.md)
 
 <br>
