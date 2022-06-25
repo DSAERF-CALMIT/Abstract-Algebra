@@ -6,64 +6,6 @@
 <br>
 Why 065? The corresponding decimal number for <b>A</b>(bstract Algebra) in <a href="https://www.ibm.com/docs/en/aix/7.3?topic=adapters-ascii-decimal-hexadecimal-octal-binary-conversion-table">ASCII</a> is 65.
 
-
-<br>
-
-<!--####################-->
-### About the course
-
-
-- #### Abstract
-
-    <p style="line-height: 1.4;">Algebra is abstract, especially when digging into areas such as the algebraic structure, which is one of the most important concentrations in abstract algebra.</p>
-    
-
-- #### What is Algebraic Structure
-
-    - Groups
-
-    - Rings
-
-    - Vector Space $\rightleftharpoons$ Fields
-
-    - Lattice
-
-    - Et cetera
-
-- #### Applications
-
-    - _Mathematics itself:_
-
-        - Algebraic Topology
-
-        - Number Theory $\rightleftharpoons$ Algebraic Number Theory
-
-        - Et cetera
-
-    - _Physics:_
-
-        - Particle Physics
-
-        - Lie Groups and Lie Algebra
-
-        - Et cetera
-
-    - _Chemistry:_
-
-        - Structural Chemistry
-
-        - Et cetera
-
-    - Et cetera
-
-----
-<br>
-
-<!--####################-->
-### Syllabus
-
-[**Syllabus.PDF** (Currently Unavailable)](https://binaryphi.site/~AliothZou/MATH-065/syllabus.pdf)
-
 ----
 <br>
 
@@ -78,7 +20,7 @@ Why 065? The corresponding decimal number for <b>A</b>(bstract Algebra) in <a hr
 | Assignment 3 | [3.pdf][13] | [3-tex.html][14] | [3.tex][15] | ~ |
 | Assignment 4 | [4.pdf][19] | [4-tex.html][20] | [4.tex][21] | ~ |
 | Assignment 5 | [5.pdf][25] | [5-tex.html][26] | [5.tex][27] | ~ |
-| Assignment 6 | [6.pdf][31] | [6-tex.html][32] | [6.tex][33] | ~ |
+| Assignment 6 | 6.pdf | 6-tex.html | 6.tex | ~ |
 
 ```
 You can use TeX-View to view the LaTeX code if you are not able to access GitHub.
@@ -93,7 +35,7 @@ You can use TeX-View to view the LaTeX code if you are not able to access GitHub
 | | PDF | TeX-View | TeX-GithubRaw |
 | Pre - Abstract Algebra | [Answer-1.pdf][4] | [Answer-1-tex.html][5] | [Answer-1.tex][6] |
 | Semigroups & Groups | [Answer-2.pdf][10] | [Answer-2-tex.html][11] | [Answer-2.tex][12] |
-| Subgroups & Quotient Groups | [Answer-3.pdf][16] | [Answer-3-tex.html][17] | [Answer-3.tex][18] |
+| Subgroups & Quotient Groups | Answer-3.pdf | Answer-3-tex.html | Answer-3.tex |
 | Homomorphism & Isomorphism | Answer-4.pdf | Answer-4-tex.html | Answer-4.tex |
 | Specific Group - Cyclic | Answer-5.pdf | Answer-5-tex.html | Answer-5.tex |
 | Specific Group - Permutation | Answer-6.pdf | Answer-6-tex.html | Answer-6.tex |
@@ -101,6 +43,12 @@ You can use TeX-View to view the LaTeX code if you are not able to access GitHub
 ```
 You can use TeX-View to view the LaTeX code if you are not able to access GitHub.
 ```
+
+<!--####################-->
+### Syllabus
+
+[**Syllabus.PDF** (Currently Unavailable)](https://binaryphi.site/~AliothZou/MATH-065/syllabus.pdf)
+
 
 [1]: https://binaryphi.site/~AliothZou/MATH-065/assignment/1.pdf
 [2]: https://binaryphi.site/~AliothZou/MATH-065/assignment/1.html
