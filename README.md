@@ -30,8 +30,8 @@ You can use TeX-View to view the LaTeX code if you are not able to access GitHub
 <!--####################-->
 ### Assignments Solutions := Lecture Notes
 
-| Description | File |
-| :---------------: | :---------: | :----: |
+| Description | File | | |
+| :---------------: | :---------: | :----: | :--: |
 | | PDF | TeX-View | TeX-GithubRaw |
 | Pre - Abstract Algebra | [Answer-1.pdf][4] | [Answer-1-tex.html][5] | [Answer-1.tex][6] |
 | Semigroups & Groups | [Answer-2.pdf][10] | [Answer-2-tex.html][11] | [Answer-2.tex][12] |
