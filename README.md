@@ -30,14 +30,14 @@ You can use TeX-View to view the LaTeX code if you are not able to access GitHub
 <!--####################-->
 ### Assignments Solutions := Lecture Notes
 
-| Description | File | | |
-| :---------------: | :---------: | :----: | :--: |
+| Description | File |
+| :---------------: | :---------: | :----: |
 | | PDF | TeX-View | TeX-GithubRaw |
 | Pre - Abstract Algebra | [Answer-1.pdf][4] | [Answer-1-tex.html][5] | [Answer-1.tex][6] |
 | Semigroups & Groups | [Answer-2.pdf][10] | [Answer-2-tex.html][11] | [Answer-2.tex][12] |
-| Subgroups & Quotient Groups | Answer-3.pdf | Answer-3-tex.html | Answer-3.tex |
-| Homomorphism & Isomorphism | Answer-4.pdf | Answer-4-tex.html | Answer-4.tex |
-| Specific Group - Cyclic | Answer-5.pdf | Answer-5-tex.html | Answer-5.tex |
+| Subgroups & Quotient Groups | [Answer-3.pdf][16] | [Answer-3-tex.html][17] | [Answer-3.tex][18] |
+| Homomorphism & Isomorphism | [Answer-4.pdf][22] | [Answer-4-tex.html][23] | [Answer-4.tex][24] |
+| Specific Group - Cyclic | [Answer-5.pdf][28] | [Answer-5-tex.html][29] | [Answer-5.tex][30] |
 | Specific Group - Permutation | Answer-6.pdf | Answer-6-tex.html | Answer-6.tex |
 
 ```
