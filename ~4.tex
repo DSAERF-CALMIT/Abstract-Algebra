@@ -1,0 +1,439 @@
+\documentclass[12pt]{scrartcl}
+\title{Abstract Algebra Assignments}
+\nonstopmode
+\usepackage{graphicx}	% Required for including pictures
+\usepackage[figurename=Figure]{caption}
+\usepackage{float}    		% For tables and other floats
+\usepackage{amsmath}  	% For math
+\usepackage{bbm}  		% For mathBBM
+\usepackage{amssymb}  	% For more math
+\usepackage{fullpage} 	% Set margins and place page numbers at bottom center
+\usepackage{paralist} 	% paragraph spacing
+\usepackage{listings} 	% For source code
+\usepackage{enumitem} 	% useful for itemization
+\usepackage{siunitx}  	% standardization of si units
+\usepackage{tikz,bm} 	% Useful for drawing plots
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand\footrule{\hrule height1pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~Jinwei Zou}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+	\begin{center}
+		\hrule
+		\vspace{15pt}
+		{\textbf { \large Solution - Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~BinaryPhi}}
+	\end{center}
+
+	\thispagestyle{empty}
+	\indent {\textbf{Name:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Assignment:} Number 4 \vspace{5pt} \\
+	\indent {\textbf{Score:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Last Edit:} \today~PDT \vspace{8pt} \\
+	\hrule
+	\vspace{15pt}	
+
+%%%%%%%%%%%%%%%%
+	\paragraph*{Problem 1: Definitions}
+
+	\begin{enumerate}[label=(\alph*)]
+	
+	%%%%%A
+	\item \begin{spacing}{1.2}Assuming $\{G_1; \circ\}$ and $\{G_2; *\}$ are two groups and $f$ is a map from $G_1$ to $G_2$, if: $$f(a \circ b) = f(a) * f(b), ~~\forall a, b \in G_1,$$ the map $f$ is called a \underline{\textbf{Group Homomorphism}}.
+\vspace{0.5em}
+
+\setlength{\leftskip}{0pt}If $G_1$ and $G_2$ are two same groups,
+
+\setlength{\leftskip}{24pt}$f$ is called an \underline{\textbf{Endomorphism}}.
+\vspace{0.5em}
+
+\setlength{\leftskip}{0pt}If a \underline{Group Homomorphism} $f$ is an injection (one-to-one),
+
+\setlength{\leftskip}{24pt}$f$ is called a \underline{\textbf{Monomorphism}}.
+\vspace{0.5em}
+
+\setlength{\leftskip}{0pt}If a \underline{Group Homomorphism} $f$ is a surjection (onto), 
+
+\setlength{\leftskip}{24pt}$f$ is called an \underline{\textbf{Epimorphism}}.
+\vspace{0.5em}
+
+\setlength{\leftskip}{0pt}If a \underline{Group Homomorphism} $f$ is a bijection (one-to-one correspondence, invertible), 
+
+\setlength{\leftskip}{24pt}$f$ is called an \underline{\textbf{Isomorphism}}, and $G_1$ and $G_2$ are \underline{\textbf{Isomorphic}}, which is denoted by $G_1 \cong G_2.$
+\end{spacing}
+
+	%%%%%B
+	\item Supplement:
+
+\vspace{0.2em}
+\underline{\textbf{Injection $|$ One to One:}} $$f: A \rightarrow B, \forall \hspace{0.2em} a, b \in A, \text{~such that }f(a) = f(b) \Longrightarrow a = b.$$
+
+\underline{\textbf{Surjection $|$ Onto:}} $$f: A \rightarrow B, \forall \hspace{0.2em} b \in B, \exists \hspace{0.2em} a \in A \text{~ s.t.} ~ f(a) = b.$$
+
+\underline{\textbf{Bijection $|$ One to One Correspondence:}} $$f: A \rightarrow B, \forall \hspace{0.2em} b \in B, \text{exists a unique} ~ a \in A \text{~ s.t.} ~ f(a) = b.$$
+
+	%%%%%C
+	\item \begin{spacing}{1.3}Assuming $f$ is a group homomorphism from group $G_1$ to group $G_2$, then the set of all elements from $G_1$ which map to element $e$ in $G_2$ is called the \underline{\textbf{Kernel}} of group homomorphism $f$, which is denoted by \underline{ker $f$}. Mathematically written as: $$\text{ker} ~f := \{g_1 \in G_1 ~ | ~ f(g_1) = e\}.$$
+\end{spacing}
+	
+
+
+	%%%%%D
+	\item \begin{spacing}{1.2} Assuming $f$ is a group homomorphism from group $G_1$ to group $G_2$, $e_1, e_2$ are the identity elements in $G_1, G_2$ respectively, $\circ, *$ are the operations in $G_1, G_2$ respectively, prove that $f(e_1) = e_2$ and $\forall a \in G_1, f(a^{-1}) = f(a)^{-1}.$
+
+	\vspace{0.5em}
+	\fbox{\begin{minipage}{35em}
+		\vspace{0.2em}
+		$f(e_1) = e_2: $
+\begin{align*}
+f(e_1) &= f(e_1 \circ e_1) = f(e_1) * f(e_1)\\
+f(e_1)^{-1} * f(e_1) &= f(e_1)^{-1} * f(e_1) * f(e_1)\\
+e_2 &= f(e_1)
+\end{align*}
+
+		$\forall a \in G_1, f(a^{-1}) = f(a)^{-1}: $ \\
+$$\forall a \in G_1, f(a^{-1}) * f(a) = f(a^{-1} \circ a) = f(e_1) = e_2 \Longrightarrow f(a^{-1}) = f(a)^{-1}.$$
+ 	\end{minipage}}\end{spacing}
+	\vspace{2em}
+
+
+%%%%%E
+	\item \begin{spacing}{1.3}Assuming $f$ is a group homomorphism from group $G_1$ to group $G_2$, $H < G_1$, prove that the image set of $H$, $f(H)$ is a subgroup of $G_2$.\end{spacing}
+
+	\vspace{0.5em}\begin{spacing}{1.5}
+	\fbox{\begin{minipage}{35em}
+		\vspace{0.2em}
+Assuming $\forall a_2 \in f(H), \exists \hspace{0.2em} a_1 \in H$ s.t. $f(a_1) = a_2,$ and $\forall b_2 \in f(H), \exists \hspace{0.2em} b_1 \in H$ s.t. $f(b_1) = b_2.$ Because $H$ is a group, $e_2 = f(e_1) \in f(H) \Longrightarrow f(H)$ is non-empty. We know that
+
+\setlength{\leftskip}{36pt}$\forall a, b \in S \Longrightarrow ab^{-1} \in S \iff S$ is a subgroup of ...
+
+\setlength{\leftskip}{0pt}Thus, $a_2b_2^{-1} = f(a_1)f(b_1)^{-1} = f(a_1)f(b_1^{-1}) = f(a_1b_1^{-1})\in f(H).$ \\$f(H)$ is a subgroup of $G_2$\vspace{0.2em}
+ 	\end{minipage}}\end{spacing}
+
+\newpage
+%%%%%F
+	\begin{spacing}{1.3}
+	\item Assuming $G$ is a group, $H \lhd G$, $\iota$ is a map from $G$ to $G/H$: \vspace{-1em}$$\iota(a) = aH, ~ \forall a \in G.\vspace{-1em}$$ Then, $\iota$ is an epimorphism, and is called the \underline{\textbf{Canonical Homomorphism}} from group $G$ to quotient group $G/H$.
+\end{spacing}
+
+%%%%%G 
+\vspace{-0.1em}
+	\item \begin{spacing}{1.2}\textbf{Group Isomorphism Theorem I $|$ Fundamental Theorem on Group Homomorphisms}\end{spacing}
+
+Prove that if $f$ is an epimorphism from group $G_1$ to group $G_2$, $G_1/\text{ker}~ f \cong G_2.$
+	\vspace{0.5em}\begin{spacing}{1.4}
+	\fbox{\begin{minipage}{35em}
+		\vspace{0.2em}
+Let a map $\phi: G_1/\text{ker} ~ f \longrightarrow G_2$, and assume $F = \text{ker} ~ f$, which means 
+\vspace{-1em}$$\phi: G_1/F \longrightarrow G_2; ~~gF \longmapsto f(g).$$
+If\vspace{-2em}
+\begin{align*}
+g_1F &= g_2F, \text{~where} ~ g_1, g_2 \in G_1\\
+&\Longrightarrow g_1Rg_2 \Longrightarrow g_1^{-1}g_2 \in F \Longrightarrow f(g_1^{-1}g_2) = e_2\\
+&\Longrightarrow f(g_1)^{-1} f(g_2) = e_2\\
+&\Longrightarrow f(g_1) = f(g_2),\\
+\text{which means it is} &\text{~well-defined to say that~} \phi \text{~is a map}
+\end{align*}
+
+Similarly, $\phi$ is an injection because if\vspace{-1em}
+$$f(g_1) = f(g_2) \Longrightarrow g_1F = g_2F, \text{~where} ~ g_1, g_2 \in G_1,$$
+
+We know that $f$ is an epimorphism, so $\phi$ is a surjection map $\Longrightarrow \phi$ is a bijection.
+
+Then, to prove $\phi$ is a group homomorphism from $G_1/F$ with operation "$\circ$" to $G_2$ with operation "*", we have: \vspace{-1em}
+\begin{align*}
+\forall aF, bF \in G_1/F, ~&\phi(aF \circ bF) = \phi(abF)\\
+&=f(ab)\\
+&=f(a)f(b)\\
+&=\phi(aF)*\phi(bF)
+\end{align*}
+
+Therfore, $\phi$ is an isomorphism, denoted by $G_1/\text{ker} ~ f \cong G_2.$
+\vspace{0.2em}
+
+
+ 	\end{minipage}}\end{spacing}
+
+%%%%%H
+	\item \textbf{Group Isomorphism Theorem II}
+\begin{spacing}{1.3}Let $G$ be a group, $N \lhd G$, and $H$ is a subgroup of $G$. Then:
+	
+\setlength{\leftskip}{20pt}1. $HN$ is a subgroup of $G$ which contains $N.$
+
+2. $(H \cap N) \lhd H.$
+
+3. $HN/N \cong H/(H \cap N).$
+
+\end{spacing}
+
+
+%%%%%I
+\item \textbf{Group Isomorphism Theorem III}
+\begin{spacing}{1.3}
+Let $G$ be a group, $N \lhd G, N \lhd G, N \subseteq H$. Then:
+
+\setlength{\leftskip}{20pt}1. $H/N \lhd G/N$
+
+2. $(G/N)/(H/N) \cong G/H$
+\end{spacing}
+
+
+%%%%%J
+\item \begin{spacing}{1.3}\textbf{Group Isomorphism Theorem IV $|$ Correspondence Theorem}
+
+Assume $f$ is an epimorphism from group $G_1$ to $G_2$, and the kernel of group homomorphism $f$ is $F = \text{ker} ~ f$. We have: 
+
+\setlength{\leftskip}{20pt}1. The map from a subgroup of $G_1$ that contains $N$ to a subgroup of $G_2$ is bijective.
+
+2. The bijection from the subgroup of $G_1$ that contains $N$ to the subgroup of $G_2$ is also a map from a normal subgroup onto a normal subgroup.
+
+3. For a normal subgroup $H \lhd G_1$ such that $H$ contains $N$, $G_1/H \cong G_2/f(H).$
+\end{spacing}
+
+\vspace{-0.2em}
+
+	\end{enumerate}
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 2: }Prove:
+
+\begin{enumerate}[label=(\alph*)]
+	\item Assuming $f$ is a group homomorphism from group $G_1$ to $G_2$, we have ker $f \lhd G_1$.
+
+\vspace{0.5em}
+	\begin{spacing}{1.2}\fbox{\begin{minipage}{35em}
+\vspace{0.3em} 
+First prove ker $f < G_1$: 
+
+\setlength{\leftskip}{24pt}Assume $e_1, e_2$ are the identities of group $G_1$ and $G_2$ respectively. For a non-empty subset ker $f$ of $G_1$ because $e_1 \in \text{ker} ~ f, \forall a, b \in \text{ker} ~ f,$ we have: 
+\begin{align*}f(ab^{-1}) &= f(a)f(b^{-1}) = f(a)f(b)^{-1} = e_2 e_2^{-1} = e_2\\
+&\Longrightarrow ab^{-1} \in \text{ker} f.\end{align*}
+\setlength{\leftskip}{24pt}Thus, ker $f < G_1.$
+\vspace{0.5em}
+
+\setlength{\leftskip}{0pt}Then, prove ker $f \lhd G_1$:
+
+\setlength{\leftskip}{24pt}$\forall g \in G_1, a \in \text{ker} f$, we have: 
+\begin{align*}f(gag^{-1}) &= f(g)f(a)f(g^{-1}) = f(g)e_2f(g)^{-1} = e_2\\
+&\Longrightarrow gag^{-1} \in \text{ker} f.
+\end{align*}
+
+\setlength{\leftskip}{24pt}Therefore, ker $f \lhd G_1.$
+\vspace{0.5em}
+
+\setlength{\leftskip}{0pt} \textbf{(Group Isomorphism Theorem I)}\vspace{0.2em}
+	\end{minipage}}\end{spacing}
+
+%\framebox(36em, 25em){}
+
+	\item Assuming $f$ is a group homomorphism from group $G_1$ to group $G_2$, then $$f \text{~is monomorphism} \iff \text{ker} ~ f = \{e_1\}, \text{~where} ~ e_1 \text{~is the identity of} ~ G_1.$$
+	\begin{spacing}{1.5}\fbox{\begin{minipage}{35em}
+\vspace{0.3em} 
+"$\Longrightarrow$: " 
+
+\setlength{\leftskip}{36pt}$\because f(e_1) = e_2, ~\therefore \{e_1\} \subseteq \text{ker} ~ f.$
+
+$\forall a \in \text{ker} ~ f, f(a) = e_2 = f(e_1). \because f ~\text{is injective}, ~ \therefore a = e_1.$
+
+Thus, ker $f = \{e_1\}$.
+
+\setlength{\leftskip}{0pt}"$\Longleftarrow$: " 
+
+\setlength{\leftskip}{36pt}If $f(a) = f(b), a, b \in G_1$, then
+\vspace{0.5em}
+
+\setlength{\leftskip}{80pt}$f(ab^{-1}) = f(a) f(b)^{-1} = e_2 \Longrightarrow ab^{-1} \in \text{ker} ~ f. $
+\vspace{0.5em}
+
+\setlength{\leftskip}{36pt}$\because \text{ker} ~ f = \{e_1\}, ~ \therefore ab^{-1} = e \Longrightarrow a = b.$
+
+Thus, $f$ is a monomorphism.
+	\end{minipage}}\end{spacing}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 3: }\begin{spacing}{1.5}Define a binary operation $\circ$ in the integer set $\mathbb{Z}$ such that: \vspace{-1em}
+$$a \circ b = a + b - a \times b, ~~\forall a, b \in \mathbb{Z}.\vspace{-1em}$$
+Prove that $\{\mathbb{Z}, \circ\}$ is a monoid, and is isomorphic to a monoid of $\mathbb{Z}$ with respect to the operation multiplication "$\times$".
+
+\vspace{1.5em}
+\setlength{\leftskip}{-12pt}\fbox{\begin{minipage}{37.4em}
+\vspace{0.3em}
+$\{\mathbb{Z}, \circ\}$ is a monoid:
+
+\vspace{0.5em}
+\setlength{\leftskip}{30pt}Let $a, b, c \in \mathbb{Z}$, we have:\vspace{-1em}
+\begin{align*}
+a \circ b &= a + b - a \times b = b \circ a\\
+e \circ a &= 0 \circ a = 0 + a - 0 \times a = a\\
+(a \circ b) \circ c &= (a + b - a \times b) + c - (a + b - a \times b)c\\
+&= a + b + c - a \times b - a \times c - b \times c + a \times b \times c\\
+&= a \circ (b \circ c).
+\end{align*}
+\begin{spacing}{0.4}Thus, $\{ \mathbb{Z}, \circ \}$ is a commutative monoid.\end{spacing}
+
+\vspace{2em}
+\setlength{\leftskip}{0pt}$\{\mathbb{Z}, \circ\}$ and a monoid of $\mathbb{Z}$ with the operation multiplication are isomorphic.
+\vspace{0.5em}
+
+\setlength{\leftskip}{30pt}We need to find a map $f$ that satisfies $f(m) \circ f(n) = f(m \times n)$. For a map $f(a) = 1-a,$ we have:
+\begin{align*}
+f(m) \circ f(n) &= f(m) + f(n) - f(m) \times f(n)\\
+&= 1 - m + 1 - n - (1 - m) \times (1 - n)\\
+&= 1 - m \times n\\
+&= f(m) \times f(n).
+\end{align*}Thus, $\{\mathbb{Z}, \circ\}$ and a monoid $\{\mathbb{Z}, \times \}$ are isomorphic.
+\vspace{0.5em}
+	\end{minipage}}
+\end{spacing}
+
+\newpage
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 4: }\begin{spacing}{1.5}
+Let $G$ be a group, prove the following statements:
+\vspace{-1em}
+$$m \longrightarrow m^{-1} \text{~is an automorphism of} ~ G \text{~if and only if} ~ G \text{~is an Abelian Group.}$$
+\fbox{\begin{minipage}{37.4em}
+\vspace{0.3em}
+Suppose the map $m \longrightarrow m^{-1}$ is $\phi$. Since $G$ is a group, $\phi$ is a surjection (one-to-one correspondence). If $\phi$ is an automorphism, we have:
+\begin{align*}
+\phi(a) \phi(b) &= \phi(ab) = (ab)^{-1} = b^{-1} a^{-1} \\
+&= \phi(b) \phi(a), \forall a, b \in G.
+\end{align*}
+Thus, $G$ is a commutative group.
+
+\vspace{1em}
+If $G$ is a commutative group, we have:
+\begin{align*}
+\phi(ab) &= (ab)^{-1} = b^{-1} a^{-1}\\
+&= \phi(b) \phi(a) = \phi(a) \phi(b)
+\end{align*}
+Thus, $f$ is an automorphism.
+
+\vspace{0.5em}
+	\end{minipage}}\end{spacing}
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 5: }\begin{spacing}{1.5}
+Assume $G$ is an abelian group, prove that \vspace{-1em}
+$$\forall n \in \mathbb{Z}, m \longrightarrow m^n \text{~is an endomorphism of} ~ G$$
+\fbox{\begin{minipage}{37.6em}
+\vspace{0.3em}
+What we are going to prove is $\forall n \in \mathbb{Z}, \forall a,b \in G, (ab)^n = a^nb^n$. 
+
+By using Mathematical induction, we have for $n=1$ the equation holds, and assuming the equation holds for $n-1$, which means:
+\begin{align*}
+(ab)^n &= (ab)(ab)^{n-1} \\
+&= aba^{n-1}b^{n-1} \\
+&= a^nb^n
+\end{align*}
+
+Thus, $\forall n \in \mathbb{Z}, a \longrightarrow a^n$ is an endomorphism of $G$.
+\vspace{0.5em}
+	\end{minipage}}
+
+
+\end{spacing}
+
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 6: }
+\begin{spacing}{1.3}Let $\phi: G \longrightarrow H$ be a group homomorphism.
+
+\vspace{1em}
+\noindent Prove that $\phi(G)$ is abelian if and only if $\forall a, b \in G, aba^{-1}b^{-1} \in \text{ker} ~ \phi$.\end{spacing}
+
+\vspace{1.5em}
+\setlength{\leftskip}{-12pt}\fbox{\begin{minipage}{38em}
+\vspace{0.3em}
+Assume
+\vspace{-2em}
+\begin{spacing}{1.5}\begin{align*}
+&\phi(a) = \alpha \in \phi(G)\\
+&\phi(b) = \beta \in \phi(G)\\
+&\forall a, b\in G.
+\end{align*}\end{spacing}
+$\forall \alpha, \beta \in \phi(G), \phi(G)$ is abelian
+\vspace{-2em}
+\begin{spacing}{1.5}\begin{align*}
+&\text{if and only if} ~~ \alpha \beta = \beta \alpha\\
+&\text{if and only if} ~~ (\beta \alpha)^{-1}(\alpha \beta) = (\beta \alpha)^{-1} (\beta \alpha) = e|_{\phi(G)}\\
+&\text{if and only if} ~~ \alpha^{-1} \beta^{-1} \alpha \beta = e|_{\phi(G)}\\
+&\text{if and only if} ~~ \phi(a)^{-1}\phi(b)^{-1}\phi(a)\phi(b) = e|_{\phi(G)}\\
+&\text{if and only if} ~~ \phi(a^{-1} b^{-1} a b) = e|_{\phi(G)}\\
+&\text{if and only if} ~~ a^{-1} b^{-1} a b \in \text{ker} ~ \phi\\
+&\text{if and only if} ~~ aba^{-1}b^{-1} \in \text{ker} ~ \phi, \text{WLOG}.
+\end{align*}\end{spacing}
+
+Therefore, $\phi(G)$ is abelian if and only if $\forall a, b \in G, aba^{-1}b^{-1} \in \text{ker} ~ \phi$
+\vspace{0.5em}
+
+	\end{minipage}}
+
+\newpage
+%%%%%%%%%%%%%%%%
+\setlength{\leftskip}{0pt}\paragraph*{Problem 7: }\begin{spacing}{1.5}
+The map $\phi: \mathbb{Z} \longrightarrow \mathbb{Z}$ defined by $\phi(n) = n-1$ for $n \in \mathbb{Z}$ is bijective. Give the expression of the binary operation "*" on $\mathbb{Z}$ such that $\phi$ is isomorphic.
+$$\{\mathbb{Z}, \times\} \longrightarrow \{\mathbb{Z}, *\}$$
+\fbox{\begin{minipage}{37.6em}
+\vspace{0.3em}
+If the map $\phi$ is isomorphic, we have: 
+\begin{align*}
+\phi(m \times n) &= \phi(m) * \phi(n) = (m-1) * (n-1)\\
+\text{WLOG}, m * n &= \phi(m+1) * \phi(n+1)\\
+&=\phi((m+1) \times (n+1)) \\
+&=\phi(m \times n + m + n + 1) \\
+&=m \times n + m + n
+\end{align*}
+Therefore, we have $\forall m, n \in \mathbb{Z}, m * n = m \times n + m + n$.
+\vspace{0.5em}
+	\end{minipage}}
+\end{spacing}
+
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 8: }\begin{spacing}{1.5}
+The map $\phi: \mathbb{Q} \longrightarrow \mathbb{Q}$ defined by $\phi(n) = 2n+1$ for $n \in \mathbb{Q}$ is bijective. Give the expression of the binary operation "*" on $\mathbb{Q}$ such that $\phi$ is isomorphic.
+$$\{\mathbb{Q}, *\} \longrightarrow \{\mathbb{Q}, +\}$$
+\fbox{\begin{minipage}{37.6em}
+\vspace{0.3em}
+The map $\phi^{-1}$ is isomorphic because $\phi$ is isomorphic, we have: 
+\begin{align*}
+\phi(m + n) &= \phi(m) * \phi(n) = (2m+1) * (2n+1)\\
+m * n &= \phi^{-1}(2m+1) * \phi^{-1}(2n+1) = \phi^{-1}((2m+1) + (2n+1))  \\
+&= \phi^{-1}(2m + 2n + 2)\\
+&= m+n+\frac{1}{2}
+\end{align*}
+Therefore, we have $\forall m, n \in \mathbb{Z}, m * n = m+n+\displaystyle\frac{1}{2}$.
+\vspace{0.5em}
+	\end{minipage}}
+\end{spacing}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

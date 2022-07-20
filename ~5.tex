@@ -1,0 +1,512 @@
+\documentclass[12pt]{scrartcl}
+\title{Abstract Algebra Assignments}
+\nonstopmode
+\usepackage{graphicx}	% Required for including pictures
+\usepackage[figurename=Figure]{caption}
+\usepackage{float}    		% For tables and other floats
+\usepackage{amsmath}  	% For math
+\usepackage{bbm}  		% For mathBBM
+\usepackage{amssymb}  	% For more math
+\usepackage{fullpage} 	% Set margins and place page numbers at bottom center
+\usepackage{paralist} 	% paragraph spacing
+\usepackage{listings} 	% For source code
+\usepackage{enumitem} 	% useful for itemization
+\usepackage{siunitx}  	% standardization of si units
+\usepackage{tikz,bm} 	% Useful for drawing plots
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{mathtools}
+
+
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand\footrule{\hrule height1pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~Jinwei Zou}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+	\begin{center}
+		\hrule
+		\vspace{15pt}
+		{\textbf { \large Solution - Abstract Algebra Assignments \raisebox{0.5\depth}{\scalebox{0.8}\textcopyright}~BinaryPhi}}
+	\end{center}
+
+	\thispagestyle{empty}
+	\indent {\textbf{Name:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Assignment:} Number 5 \vspace{5pt} \\
+	\indent {\textbf{Score:} \underline{\hbox to 60pt{}} \hspace{\fill} \textbf{Last Edit:} \today~PDT \vspace{8pt} \\
+	\hrule
+	\vspace{15pt}	
+
+%%%%%%%%%%%%%%%%
+	\paragraph*{Problem 1: Definitions}
+
+	\begin{enumerate}[label=(\alph*)]
+	
+	%%%%%A
+	\item \begin{spacing}{1.2}Given a group $G$ and an element $a$ from $G$, if $$G=\{a \circ a \circ \cdots \circ a \coloneqq a^n ~ | ~ n \in \mathbb{Z} \}$$ $G$ is called a \underline{\textbf{Cyclic Group}} and $a$ is the \underline{\textbf{Generator}\vphantom{p}}. $G$ is also denoted by $\langle a \rangle$. \end{spacing}
+
+\vspace{-0.2em}
+	%%%%%B
+	\item \begin{spacing}{1.2} Prove that the subgroup of a cyclic group is also cyclic.
+
+\vspace{0.5em}
+	\fbox{\begin{minipage}{35em}
+		\vspace{0.2em}
+		Suppose $S$ is a subgroup of a cyclic group $G$, and $G=\langle a \rangle$. 
+
+\vspace{0.3em}
+To prove $S$ is cyclic $\Longrightarrow$
+
+\vspace{0.3em}
+To prove $S = \langle a^n \rangle, n = \text{min}\{m \in \mathbb{Z}^{+} ~ | ~ a^m \in S\} \Longrightarrow$
+
+
+\begin{enumerate}[label=(\alph*)]
+\item $\langle a^n \rangle \subseteq S$, because $a^n \in S$ and the closure property.
+
+\item To prove $S \subseteq \langle a^n \rangle \Longrightarrow$
+
+To prove $\forall a^m \in S, a^m \in \langle a^n \rangle \Longrightarrow$
+
+To prove $\forall a^m \in S, \exists \hspace{0.2em} q \text{~ s.t.~} a^m = a^{qn} \Longrightarrow$
+
+Suppose $m = qn + r$ where $r$ is the remainder: $0 \leq r < n$. We have:
+
+\setlength{\leftskip}{50pt}$a^m = a^{qn+r} \Longrightarrow$
+
+$a^r = a^{m-qn} \Longrightarrow$
+
+$\because a^{m-qn} = a^m (a^{n})^{-q} \in S$
+
+$\therefore a^r \in S$
+\vspace{0.2em}
+
+\setlength{\leftskip}{0pt}If $r \neq 0$, $\because 0 \leq r < n, n$ is not the minimum value, which is an arresting contradiction.
+
+Thus, $r = 0 \Longrightarrow m = qn \Longrightarrow S \subseteq \langle a^n \rangle$.
+\end{enumerate}
+Therefore, $S = \langle a^n \rangle$.
+
+	\vspace{0.2em}
+ 	\end{minipage}}\end{spacing}
+
+
+	%%%%%C
+	\item \begin{spacing}{1.3}Prove that the subgroup of an 'integer-addition' group - $\{\mathbb{Z}; +\}$ - has the form of $m\mathbb{Z}, m \in \mathbb{N}$.
+	
+	\vspace{0.5em}
+	\fbox{\begin{minipage}{35em}
+		\vspace{0.2em}
+		Considering the generator of group $\{\mathbb{Z}; +\}$ as $1$: 
+	\vspace{-0.5em}
+\begin{align*}
+\{\mathbb{Z}; +\} = \{1 \circ 1 \circ \cdots \circ 1 \} &\coloneqq \{1^n ~ | ~ n \in \mathbb{Z}\}\\
+\text{also~} &\coloneqq \{n \cdot 1 ~ | ~ n \in \mathbb{Z}\}
+\end{align*}
+Suppose $S$ is a subgroup of $\{\mathbb{Z}; +\}$. Assume the generator in the subgroup $S$ is $1^m \text{~ or ~} m \cdot 1, ~m \in \mathbb{Z}^+$. We have $S = \langle m \cdot 1 \rangle = \{n \cdot m ~ | ~ n \in \mathbb{Z}\} = m\mathbb{Z}$. 
+
+For $S = \{0\}$, $m = 0$, $S = 0\mathbb{Z}$.
+
+Therefore, the subgroup $S$  of group $\{\mathbb{Z}; +\}$ has the form of $m\mathbb{Z}, m \in \mathbb{N}$.
+	\vspace{0.2em}
+ 	\end{minipage}}\end{spacing}
+	\vspace{2em}
+	
+%%%%%D
+	\item \begin{spacing}{1.30} Let a group $G = \langle a \rangle.$ Prove that $G$ is isomorphic to $\{\mathbb{Z}; +\}$ if the order of $G$ is infinite, and $G$ isomorphic to $\{\mathbb{Z}/m\mathbb{Z}; +\}$, or written as $\{\mathbb{Z}_m; +\}$, if the order of $G$ is finite $m$.
+
+	\vspace{0.5em}
+	\fbox{\begin{minipage}{35em}
+		\vspace{0.2em}
+		Let $\phi: \{\mathbb{Z}; +\} \longrightarrow G$, $n \mapsto (a \circ \cdots \circ a) \coloneqq a^n$.
+
+\vspace{0.3em}
+$\forall p, q, \in \{\mathbb{Z}; +\},$ we have: \vspace{-0.5em}
+$$\phi(p+q) = a^{p+q} = \underbrace{a \circ \cdots \circ a}_{p} \circ \underbrace{a \circ \cdots \circ a}_q = a^p \circ a^q = \phi(p) \circ \phi(q).$$
+Thus, $\phi$ is a group homomorphism. In addition, every element in $G$ can be expressed as $a^n,$ so $\phi$ is an epimorphism.
+
+Based on the theorem that \vspace{-0.8em}
+$$f \text{~is an epimorphism from~} G_1 \text{~to~} G_2, G_1 / \text{ker} ~ f \cong G_2,$$
+\vspace{-0.8em}we have: 
+$$\{\mathbb{Z}; +\} / \text{~ker~} \phi \cong G \text{~and ker~} \phi \text{~has the form of m}\mathbb{Z}, m \in \mathbb{N}$$
+When $m = 0$, which means ker $\phi = \{0\}$, we have $\{\mathbb{Z}; +\} \cong G \Longrightarrow G$ is infinite.
+
+Similarly, when $m \neq 0$, which means ker $\phi = m\mathbb{Z}$ where $m \in \mathbb{Z}^+$, we have $\{\mathbb{Z}; +\} / m\mathbb{Z} \cong G \Longrightarrow G \cong \{\mathbb{Z}_m; +\}$. Now, $G$ is finite with order $m$.
+	\vspace{0.2em}
+ 	\end{minipage}}\end{spacing}
+	\vspace{2em}
+
+
+%%%%%E
+	\begin{spacing}{1.4}
+	\item  Assume $G$ is a cyclic group of order $m$, $m_1$ is a positive integer factor of $m$. Prove that there exists a unique subgroup $G_1$ of order $m_1$.
+
+	\vspace{0.8em}
+	\fbox{\begin{minipage}{35em}
+			\vspace{0.2em}
+Let $G = \langle a \rangle$, we have:
+\begin{align*} 
+a^{\displaystyle m} &= e \\
+&\Downarrow\\
+a^{ \left( \displaystyle m_1\frac{m}{m_1} \right) } &= a^{ \left(\displaystyle\frac{m}{m_1} \right)\displaystyle{m_1} } = e
+\end{align*}
+For a positive integer $p < m_1$, which means $0 < (m/m_1)p < m$, we have: $(a^{m/m_1})^p \neq e$.
+Thus $\langle a^{m/m_1} \rangle$ is the subgroup of order $m_1$.
+
+Then, assume $G_1 = \langle a^p \rangle$ where $p = \text{~min}\{m \in \mathbb{Z}^+ ~ | ~ a^m \in G_1\}$. For any $a^k \in G_1$, we have $p | k$. Since $a^m \in G_1$, $p | m$. Then, we have $(a^p)^{m/p} = e$, which means $G_1$ has an order of $m/p$, which is also by definition $m_1$. Thus, $m/p = m_1 \Longrightarrow p = m/m_1 \Longrightarrow G_1 = \langle a^{m/m_1} \rangle.$ The uniqueness of this subgroup is therefore proven.\\
+
+Second method to prove the first statement (there exists a subgroup of order $m_1$):
+The finite cyclic group of order $m$ is isomorphic to $\{\mathbb{Z}_m; +\}$, which also means: 
+$$G \cong \{\mathbb{Z}_m; +\} = \left\{\bar{0}, \bar{1}, \cdots, \overline{m-1}\right\}.$$
+
+Since $m_1 | m, \cfrac{m}{m_1}$ is a positive integer. We have:
+\begin{align*}
+\forall u &\in \langle \overline{(\cfrac{m}{m_1})}\rangle \coloneqq \left\{\bar{0}, \overline{(\cfrac{m}{m_1})}, \overline{(2\cfrac{m}{m_1})}, \cdots, \overline{(m_1-1)
+\cfrac{m}{m_1}} \right\}, \\
+u &\in \{\mathbb{Z}_m; +\},
+\end{align*}
+
+which is isomorphic to the subgroup of $G$ of order $m_1.$
+
+		\vspace{0.2em}
+	 	\end{minipage}}
+	\end{spacing}
+
+
+\newpage
+%%%%%F
+\item \begin{spacing}{1.2} Prove that every cyclic group is abelian.
+
+	\vspace{0.5em}
+	\fbox{\begin{minipage}{35.4em}
+		\vspace{0.2em}
+		Let $a$ be the generator of a cyclic group $G$. We have: $$G=\langle a \rangle = \{a^n ~ | ~ n \in \mathbb{Z}\}$$
+		For any two element $m$ and $n$ in $G$, suppose $m = a^p$ and $n = a^q$. Then, according to the associative law, we have: $$m \circ n = a^p \circ a^q = a^{p+q} = a^{q+p} = a^q \circ a^p = n \circ m.$$
+		Thus, every cyclic group is abelian.
+	\vspace{0.2em}
+ 	\end{minipage}}\end{spacing}
+	\vspace{2em}
+	
+%%%%%G
+\item \begin{spacing}{1.3} Assume $S$ is a non-empty subset of group $G$. Let $S^{-1}$ be equal to $\{a^{-1} ~ | ~ a \in S\}$. Then, prove that: $$\{a_1 \cdots a_m ~ | ~ a_1, \cdots , a_m \in S \cup S^{-1}\} \text{~is a subgroup of~} G.$$
+
+\fbox{\begin{minipage}{35.4em}
+		\vspace{0.2em}
+		All \textbf{four} statements can be proven intuitively. 
+
+I'll only prove the closure property here.
+
+Let $H = \{a_1 \cdots a_m ~ | ~ a_1, \cdots , a_m \in S \cup S^{-1}\}$. 
+\begin{align*}
+\forall x \in H, ~&\exists ~x_1, \cdots, x_p \in S \cup S^{-1} \text{~s.t.~} x = x_1 \cdots x_p.\\ 
+\forall y \in H, ~&\exists ~y_1, \cdots, y_q \in S \cup S^{-1} \text{~s.t.~} y = y_1 \cdots y_q.
+\end{align*}
+What we need to do is to prove that $xy \in H$.
+Since
+$$x_1, \cdots, x_p, y_1, \cdots, y_q \in S \cup S^{-1},$$
+
+it is apparent that
+$$xy = x_1 \cdots x_p y_1 \cdots y_q \in H,$$
+
+meaning that $\forall x, y \in H, xy \in H.$
+
+Therefore, the closure property is proven.
+	\vspace{0.2em}
+ 	\end{minipage}}
+
+	\vspace{0.4em}
+Additionally, this subgroup $H$ of group $G$ is called the subgroup \underline{\textbf{generated by $S$}}, denoted by $\langle S \rangle.$ (Note that in general $"\langle"$ and $"\rangle"$ have nothing to do with cyclic.)
+\end{spacing}
+	\vspace{2em}
+
+	\end{enumerate}
+
+\newpage
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 2: }\begin{spacing}{1.4}Let $G$ be a group, $a, b \in G$ and the corresponding orders are $m$ and $n$. Prove the following statements:\end{spacing}
+
+\vspace{-0.5em}
+\begin{enumerate}[label=(\alph*)]
+\item The order of $a^k$ is $\cfrac{m}{\text{gcd}(m, k)}$.
+
+\vspace{0.5em}
+	\begin{spacing}{1.3}\fbox{\begin{minipage}{35em}
+\vspace{0.3em} 
+Assume the order of $a^k$ is $q$, which means $a^{kq} = e$. We have:
+\begin{align*}
+&m | kq \Longrightarrow \cfrac{m}{\text{gcd}(m,k)} ~\bigg|~ \cfrac{k}{\text{gcd}(m,k)}q, \\
+&\because \cfrac{m}{\text{gcd}(m,k)} \not\bigg| ~\cfrac{k}{\text{gcd}(m,k)},\\
+&\therefore \cfrac{m}{\text{gcd}(m,k)} ~\bigg|~ q \text{~and~} k\cfrac{m}{\text{gcd}(m,k)} ~\bigg|~ kq 
+\end{align*}
+Thus $(a^{\displaystyle{k}})^{\left(\cfrac{m}{\text{gcd}(m,k)}\right)} = e \Longrightarrow q ~\bigg|~ \cfrac{m}{\text{gcd}(m,k)}.$
+
+Therefore, the order of $a^k$ is $q = \cfrac{m}{\text{gcd}(m,k)}.$
+\vspace{0.3em} 
+	\end{minipage}}\end{spacing}
+
+\vspace{2em} 
+	\item \begin{spacing}{1.5} Assume $\langle a \rangle \cap \langle b \rangle = \{e\}, ab = ba.$ The order of $ab$ is the least common multiple of $m$ and $n$: $\text{lcm}(m,n)$.
+
+\vspace{1em} 
+\fbox{\begin{minipage}{35em}
+\vspace{0.3em} 
+Assume the order of $ab$ is $x: (ab)^x = e$. Because $ab = ba,$ we have: $$a^x b^x = e \Longrightarrow a^x = b^{-x} \in \langle a \rangle \cap \langle b \rangle = \{e\}.$$
+Thus, $$a^x = b^x = e \Longrightarrow m | x, n | x \Longrightarrow \text{lcm}(m, n) ~ | ~ x.$$
+Similarly, $(ab)^{\displaystyle{\text{lcm}(m, n)}} = a^{\displaystyle{\text{lcm}(m, n)}} b^{\displaystyle{\text{lcm}(m, n)}} = e.$ Thus, $x ~ | ~ \text{lcm}(m, n).$
+
+Therefore, the order of $ab$ is $x = \text{lcm}(m, n).$
+\vspace{0.3em} 
+	\end{minipage}}\end{spacing}
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 3: }\begin{spacing}{1.4}Find the elements and the number of elements of the following subgroups.
+
+
+\begin{enumerate}[label=(\alph*)]
+\item  The cyclic subgroup of $\{\mathbb{Z}_{20}; +\}$ generated by $25$.
+
+\vspace{0.5em}
+\fbox{\begin{minipage}{35em}
+\vspace{0.3em} 
+Let the order of $\langle a \rangle$ be $m$. The order of $a^k$ is: \vspace{-0.8em} $$q = \cfrac{m}{\text{gcd}(m,k)} = \cfrac{20}{\text{gcd}(20,25)} = 4.$$
+
+The cyclic subgroup is $\left\{ \overline{0\vphantom{b}}, \overline{25\vphantom{b}}, \overline{50\vphantom{b}}, \overline{75\vphantom{b}} \right\}.$
+\vspace{0.3em} 
+	\end{minipage}}
+
+\vspace{1em} 
+\item The cyclic subgroup of $\{\mathbb{Z}_{63}; +\}$ generated by $49$.
+
+\vspace{0.5em}
+\fbox{\begin{minipage}{35em}
+
+The order of $a^k$ is: $q = \cfrac{63}{\text{gcd}(63,49)} = 9.$
+
+\vspace{0.6em} 
+The cyclic subgroup is $\left\{ \overline{0\vphantom{b}}, \overline{49\vphantom{b}}, \overline{98\vphantom{b}}, \overline{147\vphantom{b}}, \overline{196\vphantom{b}}, \overline{245\vphantom{b}}, \overline{294\vphantom{b}}, \overline{343\vphantom{b}}, \overline{392\vphantom{b}}\right\}.$
+\vspace{0.3em} 
+	\end{minipage}}
+
+\vspace{1em} 
+\item The cyclic subgroup of group $\{\mathbb{C}; \cdot\}$ of non-zero complex numbers 
+
+generated by $i ~(\sqrt{-1})$.
+
+\vspace{0.5em}
+\fbox{\begin{minipage}{35em}
+\vspace{0.3em} 
+$i = 0+1i \Longrightarrow \text{cos}\theta + i\text{sin}\theta = e^{i\theta}, \theta = \pi/2.$
+
+\vspace{1em} 
+The order of $\left\langle e^{\displaystyle{i\pi/2}} \right\rangle$ is $2\pi / (\pi/2) = 4.$
+
+\vspace{1em} 
+The elements are $\left\{ e^{\displaystyle{i0}}, e^{\displaystyle{i\pi/2}}, e^{\displaystyle{i\pi}}, e^{\displaystyle{3i\pi/2}} \right\},$ or $\{1, i, -1, -i\}$
+\vspace{0.3em} 
+	\end{minipage}}
+
+\vspace{1em} 
+\item The cyclic subgroup of group $\{\mathbb{C}; \cdot\}$ of non-zero complex numbers 
+
+generated by $\cfrac{\sqrt{2}+\sqrt{2}i}{2}$.
+
+\vspace{0.5em}
+\fbox{\begin{minipage}{35em}
+\vspace{0.3em} 
+$\sqrt{2}/2+i\sqrt{2}/2 = \text{cos}(\pi/4) + i \text{sin}(\pi/4).$
+
+\vspace{1em} 
+The order of $\left\langle e^{\displaystyle{i\pi/4}} \right\rangle$ is $2\pi / (\pi/4) = 8.$
+
+\vspace{1em} 
+The elements are $\left\{ e^{\displaystyle{i0}}, e^{\displaystyle{i\pi/4}}, e^{\displaystyle{i\pi/2}}, e^{\displaystyle{3i\pi/4}}, e^{\displaystyle{i\pi}}, e^{\displaystyle{5i\pi/4}}, e^{\displaystyle{3i\pi/2}}, e^{\displaystyle{7i\pi/4}} \right\}.$
+
+\vspace{0.3em} 
+	\end{minipage}}
+
+\end{enumerate}
+
+\end{spacing}
+
+
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 4: }\begin{spacing}{1.5}Let $m, n$ be two prime numbers and $m \neq n$. Let $k$ be a positive integer. 
+
+\vspace{0.5em}
+Find the number of generators in the following situations.
+
+\begin{enumerate}[label=(\alph*)]
+\item How many generators are there in $\{\mathbb{Z}_{mn}; +\}$?
+
+\vspace{0.5em}
+\fbox{\begin{minipage}{35.4em}
+\vspace{0.3em}
+$\{\mathbb{Z}_{mn}; +\}$ is a cyclic group of order $mn$. Let $x$ be the generator of this cyclic group. We have:\vspace{-0.4em}
+$$\langle x \rangle \text{~exists iff gcd}(mn, x) = 1 (\text{HCF}(mn, x) = 1),$$
+where HCF means the highest common factor ($mn$ and $x$ are coprime).
+
+The number of positive integers that are coprime with $mn$ between $1$ and $mn$ is:\vspace{-0.5em}
+$$(m-1)(n-1) = mn-m-n+1$$
+Therefore, there are $mn-m-n+1$ generators in $\{\mathbb{Z}_{mn}; +\}$.
+\vspace{0.3em} 
+	\end{minipage}}
+
+\vspace{2em} 
+\item How many generators are there in $\{\mathbb{Z}_{m^k}; +\}$?
+
+\vspace{0.5em}
+\fbox{\begin{minipage}{35.4em}
+\vspace{0.3em}
+$\{\mathbb{Z}_{m^k}; +\}$ is a cyclic group of order $m^k$. Let $x$ be the generator of this cyclic group. We have:
+$$\langle x \rangle \text{~exists iff gcd}(m^k,x) = 1 (\text{HCF}(m^k, x) = 1),$$
+where HCF means the highest common factor ($m^k$ and $x$ are coprime).
+
+The number of positive integers that are coprime with $mn$ between $1$ and $mn$ is:\vspace{-0.5em}
+\begin{align*}
+\phi(m^{k}) &= m^{k}\left(1-\cfrac{1}{m}\right)\\
+&= m^{k-1}(m-1)\\
+&= m^{k} - m^{k-1}.
+\end{align*}
+Therefore, there are $m^k-m^{k-1}$ generators in $\{\mathbb{Z}_{m^k}; +\}$.
+\vspace{0.3em} 
+	\end{minipage}}
+
+\end{enumerate}
+\end{spacing}
+
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 5: }Euler's Totient Function\\
+
+\noindent Euler's Totient Function is defined as:
+$$\phi(m) = \big|\hspace{2pt}\left\{n \in \mathbb{N} ~ | ~ n < m, \text{gcd}(m,n) = 1 \left(\text{HCF}(m,n) = 1\right)\right\}\hspace{2pt}\big|~,~ m\in \mathbb{N}.$$
+Assuming multiplicative rule applies to this function, prove the following statements.
+
+\begin{enumerate}[label=(\alph*)]
+\item Let $p$ be a prime number. $\phi(p^x) = p^x-p^{x-1}.$
+
+\vspace{0.5em}
+\begin{spacing}{1.2}\fbox{\begin{minipage}{35.4em}
+\vspace{0.3em}
+We have:
+\vspace{-0.5em}
+\begin{align*}
+p^x = \big|\hspace{2pt} &\{1, 2, \cdots , p^x\} \hspace{2pt} \big|\\
+=\big|\hspace{2pt} &\{n ~ | ~ 1 \leq n \leq p^x, \text{gcd}(n, p^x) = 1\} ~\cup \\
+&\{n ~ | ~ 1 \leq n \leq p^x, \text{gcd}(n, p^x)\neq 1\}\hspace{4pt} \big|.\\
+\text{Note that~} \big|\hspace{2pt} &\{n ~ | ~ 1 \leq n \leq p^x, \text{gcd}(n, p^x) = 1\} ~\cap \\
+&\{n ~ | ~ 1 \leq n \leq p^x, \text{gcd}(n, p^x)\neq 1\}\hspace{4pt} \big| = 0.\\
+\text{Additionally,}~&\text{gcd}(n,p^x)\neq 1 \iff \text{gcd}(n,p) \neq 1,\\
+\because ~&p \text{~is a prime number}, ~\therefore p | n.\\
+\therefore ~&\big|\hspace{2pt}\{n ~ | ~ 1 \leq n \leq p^x, \text{gcd}(n, p^x)\neq 1\}\hspace{2pt}\big| = \big|\hspace{2pt}\{1p, 2p, \cdots , p^{x-1}p\}\hspace{2pt}\big| \\
+&\hspace{175pt}= p^{rx-1}.\\
+\text{Therefore,~} \phi(p^x) &= \big|\hspace{2pt}\{n ~ | ~ 1 \leq n \leq p^x, \text{gcd}(n, p^x) = 1\}\hspace{2pt}\big| = p^x-p^{x-1}.
+\end{align*}
+
+\vspace{0.3em} 
+	\end{minipage}}
+
+\vspace{0.3em} 
+\item Let $d = p_1^{x_1}p_2^{x_2} \cdots p_k^{x_k};$ $p_1, p_2, \cdots , p_k$ are prime numbers. We have: \vspace{-0.5em}$$\phi(d) = \prod_{i=1}^{k}(p_i^{x_i}-p_i^{x_i-1}).$$
+\fbox{\begin{minipage}{35.4em}
+\vspace{0.3em} 
+According to the multiplicative rule, we have:
+\begin{align*}
+\phi(d) &= \phi(p_1^{x_1}p_2^{x_2} \cdots p_k^{x_k})\\
+&= \phi(p_1^{x_1}) \phi(p_2^{x_2}) \cdots \phi(p_k^{x_k})\\
+&= \prod_{i=1}^{k}\phi(p_i^{x_i})\\
+&= \prod_{i=1}^{k}(p_i^{x_i}-p_i^{x_i-1}).
+\end{align*}
+The formula of Euler's Totient Function is therefore proven.
+\vspace{0.3em} 
+	\end{minipage}}
+\end{spacing}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 6: }Let $r$ and $s$ be positive integers. 
+
+\vspace{1em}
+\noindent Show that $\{mr + ns ~ | ~m, n \in \mathbb{Z}\}$ is a subgroup of $\mathbb{Z}$.\\
+
+
+\begin{spacing}{1.3}
+\setlength{\leftskip}{-12pt}\fbox{\begin{minipage}{38em}
+\vspace{0.3em} 
+As a matter of fact, what we need is to prove $\{mr + ns ~ | ~m, n \in \mathbb{Z}\}$ satisfies all statements of being a group under the operation of, say, addition.
+
+\underline{\textbf{Closure:}\vphantom{p}} \vspace{-1em}
+\begin{align*}
+&\forall x, y \in S = \{mr + ns ~ | ~m, n \in \mathbb{Z}\}, \exists ~m_1, m_2, n_1, n_2 \in \mathbb{Z}  \\
+&\text{s.t.~} x = m_1r+n_1s, ~y = m_2r+n_2s.\\
+\text{Then, ~} &x+y = (m_1r+n_1s) + (m_2r+n_2s)\\
+&~~~~~~~=(m_1+m_2)r+(n_1+n_2)s \in S
+\end{align*}
+\underline{\textbf{Associativity:}} 
+\vspace{-1em}
+
+$$\text{It's easy to prove that~} \forall x, y, z \in S, (x+y)+z = x+(y+z).$$
+
+
+\underline{\textbf{Identity:}} 
+\vspace{-1em}
+
+$$\text{It's easy to prove that~} e = 0 \in S \text{~when~} n=0, m= 0.$$
+
+\underline{\textbf{Inversibility:}} 
+\vspace{-1em}
+\begin{align*}
+\text{It's easy to prove that~} &\forall x \in S, \exists ~ m, n \in \mathbb{Z}\\
+\text{s.t.~} &x = mr+ns, \\
+\text{and~} &\exists~ m^{-1} = -m, ~n^{-1}=-n \in \mathbb{Z}\\
+\text{s.t.~} &x^{-1}+x = x+x^{-1} = \\
+&(mr+ns)+((-m)r+(-n)s) = 0 =e.
+\end{align*}
+	\end{minipage}}
+\end{spacing}
+
+%%%%%%%%%%%%%%%%
+\paragraph*{Problem 7: } Let $x$ and $y$ be two elements of a group $G$. 
+
+\vspace{1em}
+\noindent Show that if $xy$ has finite order $n$, then $yx$ also has order $n$.\\
+
+\begin{spacing}{1.3}
+\setlength{\leftskip}{-12pt}\fbox{\begin{minipage}{38em}
+\vspace{-1.2em}
+\begin{align*}
+(xy)^n = e &\iff y(xy)^nx=yex\\
+&\iff (yx)^{n+1} = yex = (yx)e\\
+&\iff (yx)^{-1} (yx)^{n+1} = (yx)^{-1}(yx)e\\
+&\iff (yx)^n = e.
+\end{align*}
+\vspace{-1.5em}
+\end{minipage}}
+\end{spacing}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
